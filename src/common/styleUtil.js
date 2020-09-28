@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import styled, { css } from "styled-components";
+import styled, { css, createGlobalStyle } from "styled-components";
 
 //media query를 통한 자동 리사이징
 export const sizes = {
-    wide: "1400px",
+    wide: "1170px",
     desktop: "992px",
     tablet: "768px",
     phone: "663px",
@@ -18,14 +18,114 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
     return acc;
 }, {});
 
+// 글로벌 스타일 Root에서 선언
+export const GlobalStyles = createGlobalStyle`
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  @font-face {
+    font-family: "NotoSansCJKkr";
+    src: local("NotoSansCJKkr"),
+      url(${require("assets/fonts/NotoSansKR-Regular.otf")});
+  }
+  @font-face {
+    font-family: "NotoSansCJKkr-Regular";
+    src: local("NotoSansCJKkr-Regular"),
+      url(${require("assets/fonts/NotoSansKR-Regular.otf")});
+  }
+  @font-face {
+    font-family: "NotoSansCJKkr-Light";
+    src: local("NotoSansCJKkr-Light"),
+      url(${require("assets/fonts/NotoSansKR-Light.otf")});
+  }
+  @font-face {
+    font-family: "NotoSansCJKkr-Thin";
+    src: local("NotoSansKR-Thin"),
+      url(${require("assets/fonts/NotoSansKR-Thin.otf")});
+  }
+  @font-face {
+    font-family: "NotoSansCJKkr-Medium";
+    src: local("NotoSansKR-Medium"),
+      url(${require("assets/fonts/NotoSansKR-Medium.otf")});
+  }
+  @font-face {
+    font-family: "NotoSansCJKkr-Bold";
+    src: local("NotoSansKR-Bold"),
+      url(${require("assets/fonts/NotoSansKR-Bold.otf")});
+  }
+  @font-face {
+    font-family: "NotoSansCJKkr-Black";
+    src: local("NotoSansKR-Black"),
+      url(${require("assets/fonts/NotoSansKR-Black.otf")});
+  }
+
+  @font-face {
+    font-family: "Roboto-Thin";
+    src: local("Roboto-Thin"),
+      url(${require("assets/fonts/Roboto-Thin.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-ThinItalic";
+    src: local("Roboto-ThinItalic"),
+      url(${require("assets/fonts/Roboto-ThinItalic.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-Light";
+    src: local("Roboto-Light"),
+      url(${require("assets/fonts/Roboto-Light.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-LightItalic";
+    src: local("Roboto-LightItalic"),
+      url(${require("assets/fonts/Roboto-LightItalic.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: local("Roboto"),
+      url(${require("assets/fonts/Roboto-Regular.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-Italic";
+    src: local("Roboto-Italic"),
+      url(${require("assets/fonts/Roboto-Italic.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-Bold";
+    src: local("Roboto-Bold"),
+      url(${require("assets/fonts/Roboto-Bold.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-BoldItalic";
+    src: local("Roboto-BoldItalic"),
+      url(${require("assets/fonts/Roboto-BoldItalic.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-Black";
+    src: local("Roboto-Black"),
+      url(${require("assets/fonts/Roboto-Black.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-BlackItalic";
+    src: local("Roboto-BlackItalic"),
+      url(${require("assets/fonts/Roboto-BlackItalic.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-Medium";
+    src: local("Roboto-Medium"),
+      url(${require("assets/fonts/Roboto-Medium.ttf")});
+  }
+  @font-face {
+    font-family: "Roboto-MediumItalic";
+    src: local("Roboto-MediumItalic"),
+      url(${require("assets/fonts/Roboto-MediumItalic.ttf")});
+  }
+`;
+
 export const Theme = {
-    mint: "#53e3ac",
-    light_gold: "#ffd55d",
-    red: "#fe614f",
     v_light_gray: "#e6e6e6",
     mi_gray: "#616161",
     dark_gray: "#1a1a1a",
-    aqua_green: "#11c78f",
     warm_gray: "#9d9d9d",
 };
 
@@ -223,7 +323,7 @@ export const Text = styled.div`
     padding-bottom: ${(props) => props.padding_bottom || "0px"};
     padding-right: ${(props) => props.padding_right || "0px"};
     padding-left: ${(props) => props.padding_left || "0px"};
-    font-size: ${(props) => props.size || "28px"};
+    font-size: ${(props) => props.size || "50px"};
     color: ${(props) => props.theme[props.color] || props.color || props.theme.dark_gray};
     line-height: ${(props) => props.height || "1.25"};
     letter-spacing: ${(props) => props.letter_spacing || ""};
