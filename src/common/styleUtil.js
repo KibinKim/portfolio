@@ -329,10 +329,11 @@ export const Text = styled.div`
     letter-spacing: ${(props) => props.letter_spacing || ""};
     text-decoration: ${(props) => (props.underline ? "underline" : "")};
     order: ${(props) => (props.order ? props.order : "")};
-    transition: color 0.15s ease-out;
+    transition: ${(props) => (props.transition ? props.transition : "color 0.15s ease-out")};
     &:hover {
         cursor: ${(props) => props.cursor || ""};
         color: ${(props) => props.hover_color || ""};
+        font-size: ${(props) => props.hover_size};
     }
     ${media.phone`
         display: ${(props) => (props.desktop ? "none" : "block")};
@@ -354,4 +355,23 @@ export const Text = styled.div`
         letter-spacing: ${(props) => props.mobile_letter_spacing};
         order: ${(props) => (props.order ? props.mobile_order : "")};
     `}
+`;
+
+export const HeaderContainer = styled.div`
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    top: 3%;
+    left: 3%;
+    right: 3%;
+    z-index: 3;
+`;
+
+export const FooterContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    background-color: #000;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 1%;
 `;
