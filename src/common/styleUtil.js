@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import styled, { css, createGlobalStyle } from "styled-components";
+import styled, { css, createGlobalStyle, keyframes } from "styled-components";
+import { HeartAnim, FadeIn } from "anim/styleUtil";
 
 //media query를 통한 자동 리사이징
 export const sizes = {
     wide: "1170px",
     desktop: "992px",
-    tablet: "768px",
+    tablet: "755px",
     phone: "663px",
     mini: "340px",
 };
@@ -23,6 +23,10 @@ export const GlobalStyles = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
+  }
+  ::selection {
+    background-color: #281b7d;
+    color: #fff;
   }
   @font-face {
     font-family: "NotoSansCJKkr";
@@ -127,6 +131,8 @@ export const Theme = {
     mi_gray: "#616161",
     dark_gray: "#1a1a1a",
     warm_gray: "#9d9d9d",
+    mi_blue: "#4970bd",
+    dark_blue: "#281b7d",
 };
 
 export const Container = styled.div`
@@ -354,17 +360,61 @@ export const Text = styled.div`
         line-height: ${(props) => props.mobile_height};
         letter-spacing: ${(props) => props.mobile_letter_spacing};
         order: ${(props) => (props.order ? props.mobile_order : "")};
+        &:hover {
+          font-size: ${(props) => props.mobile_hover_size};
+      }
+    `}
+`;
+
+export const Img = styled.img`
+    display: ${(props) => (props.mobile ? "none" : "block")};
+    width: ${(props) => props.width || ""};
+    height: ${(props) => props.height || ""};
+    margin-top: ${(props) => props.top || ""};
+    margin-left: ${(props) => props.left || ""};
+    margin-right: ${(props) => props.right || ""};
+    border-radius: ${(props) => props.border_radius || ""};
+    &:hover {
+        cursor: ${(props) => props.cursor || ""};
+        background-color: ${(props) => props.hover_color || ""};
+    }
+    ${media.phone`
+        display: ${(props) => (props.desktop ? "none" : "block")};
+        width: ${(props) => props.mobile_width || ""};
+        height: ${(props) => props.mobile_height || ""};
+        margin-top: ${(props) => props.mobile_top || ""};
+        margin-left:${(props) => props.mobile_left};
+        margin-right: ${(props) => props.mobile_right || ""};
+
+    `}
+`;
+
+//desktop에서만
+export const DesktopBr = styled.br`
+    display: block;
+    ${media.phone`
+        display: none;
+    `}
+`;
+//mobile에서만
+export const MobileBr = styled.br`
+    display: none;
+    ${media.phone`
+        display: block;
     `}
 `;
 
 export const HeaderContainer = styled.div`
     display: flex;
     position: fixed;
+    width: 100%;
     justify-content: space-between;
-    top: 3%;
-    left: 3%;
-    right: 3%;
+    top: 5%;
     z-index: 3;
+    ${media.phone`
+      width: 375px;
+      top: 2%;
+    `}
 `;
 
 export const FooterContainer = styled.div`
@@ -373,5 +423,73 @@ export const FooterContainer = styled.div`
     background-color: #000;
     padding-left: 3%;
     padding-right: 3%;
-    padding-bottom: 1%;
+    padding-bottom: 2%;
+`;
+
+export const HeaderText = styled(Text)`
+    font-size: 15px;
+    animation: ${(props) => props.anim || FadeIn} 0.8s ease-in;
+    margin-left: 3%;
+    &:hover {
+        cursor: pointer;
+        color: #4970bd;
+    }
+    ${(props) =>
+        props.scroll_top > 100 &&
+        css`
+            animation: ${FadeIn} 1s ease-in;
+        `}
+    ${media.phone`
+      font-size: 6px;
+    `}
+`;
+
+export const ChangedHeaderBox = styled(Text)`
+    display: flex;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    margin-left: 3%;
+    border-radius: 3px;
+    border: solid 1px ${(props) => (props.color === "#000" ? "#000" : "#e6e6e6")};
+    align-items: center;
+    justify-content: center;
+    animation: ${(props) => props.anim || FadeIn} 0.8s ease-in;
+    &:hover {
+        border: solid 1px #4970bd;
+        cursor: pointer;
+        color: #4970bd;
+    }
+    ${(props) =>
+        props.scroll_top < 100 &&
+        css`
+            animation: FadeIn 1s ease-in;
+        `}
+    ${media.phone`
+        font-size: 6px;
+      `}
+`;
+
+export const HeaderMail = styled(Text)`
+    font-size: 15px;
+    margin-right: 3%;
+    animation: ${(props) => props.anim || FadeIn} 0.8s ease-in;
+    transition: transform 0.8s, color 0.15s ease-out;
+    &:hover {
+        cursor: pointer;
+        color: #4970bd;
+    }
+    ${(props) =>
+        props.scroll_top > 100 &&
+        css`
+            transform: matrix(0, 0.9, -0.9, 0, 0, 102) translateX(-17px);
+            transition: transform 0.8s, color 0.15s ease-out;
+        `}
+    ${media.phone`
+        font-size: 6px;
+      `}
+`;
+
+export const HeartText = styled(Text)`
+    animation: ${HeartAnim} 2s infinite;
 `;
