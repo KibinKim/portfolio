@@ -4,12 +4,12 @@ import { FooterContainer, Row, Text, HeartText } from "common/styleUtil";
 export default class Footer extends Component {
     render() {
         return (
-            <FooterContainer color="#000">
+            <FooterContainer>
                 <Row>
                     <Text
                         size="15px"
                         mobile_size="10px"
-                        color="v_light_gray"
+                        color="dark_gray"
                         hover_color="#616161"
                         cursor="pointer"
                         onClick={() =>
@@ -21,7 +21,7 @@ export default class Footer extends Component {
                     <Text
                         size="15px"
                         mobile_size="10px"
-                        color="v_light_gray"
+                        color="dark_gray"
                         hover_color="#616161"
                         cursor="pointer"
                         left="25px"
@@ -35,11 +35,11 @@ export default class Footer extends Component {
                     © 2020 Kimkibin
                 </Text>
                 <Row align_items="center">
-                    <Text size="15px" mobile_size="10px" color="v_light_gray">
+                    <Text size="15px" mobile_size="10px" color="mi_gray">
                         Made by Kimkibin
                     </Text>
                     <HeartText size="20px" mobile_size="13px" left="10px" mobile_left="5px">
-                        🤍
+                        🖤
                     </HeartText>
                 </Row>
             </FooterContainer>

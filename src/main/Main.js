@@ -1,31 +1,75 @@
 import React, { Component } from "react";
+import { URL_FRONT } from "common/config";
 import My from "main/my/My";
+import MyWork from "main/my/MyWork";
 import Pickle from "main/pickle/Pickle";
+import Others from "main/others/Others";
+import OtherWorks from "main/otherworks/OtherWorks";
+import Appeal from "main/appeal/Appeal";
 import { Container, Column, Text } from "common/styleUtil";
-import { Page_1, Page_2, SlideInText, SlowSlideInText, BounceText } from "./styleUtil";
+import { Page_1, Page_2, SlideInText, BounceText } from "./styleUtil";
+import { connect } from "react-redux";
 
-export default class Main extends Component {
+class Main extends Component {
+    handleScroll = (e) => {
+        const { scroll } = this.props;
+        const page_1 = document.getElementById("page_1");
+        const first_title = document.getElementById("first_title");
+        const second_title = document.getElementById("second_title");
+
+        if (first_title && second_title && page_1) {
+            first_title.style.transform = `scale(${1 - scroll * 0.001})`;
+
+            if (scroll > 600 && scroll < 1000) {
+                second_title.style.transform = `scale(${scroll * 0.001})`;
+                page_1.style.filter = ` blur(0px)`;
+            } else if (scroll > 1100) {
+                page_1.style.filter = ` blur(${scroll * 0.0009}px)`;
+            }
+        }
+    };
+
+    componentDidMount = () => {
+        window.addEventListener("scroll", this.handleScroll);
+    };
+
     render() {
         return (
-            <Container>
-                <Page_1>
-                    <SlideInText second="3s" font_family="NotoSansCJKkr-Bold">
+            <Container overflow_x="hidden" onScroll={this.handleScroll}>
+                <Page_1 id="page_1">
+                    <SlideInText
+                        id="first_title"
+                        size="90px"
+                        second="3s"
+                        text_align="center"
+                        font_family="NotoSansCJKkr-Bold"
+                    >
                         Make the Question.
-                        <br />
-                        <br />
+                        <Text top="50px" size="18px" color="#fff">
+                            Web Developer
+                        </Text>
                     </SlideInText>
-                    <SlowSlideInText second="3s" font_family="NotoSansCJKkr-Light">
-                        안녕하세요?
-                        <br />
-                        저는 프론트엔드 개발자
-                        <br />
-                        <span style={{ fontFamily: "NotoSansCJKkr" }}>김기빈</span> 입니다.
-                    </SlowSlideInText>
+                    <Text
+                        id="second_title"
+                        top="700px"
+                        size="70px"
+                        color="#fff"
+                        text_align="center"
+                        height="150px"
+                        font_family="NotoSansCJKkr-Medium"
+                        style={{ transform: "scale(0)" }}
+                    >
+                        안녕하세요! <br /> 저는 김기빈입니다 :)
+                    </Text>
                 </Page_1>
                 <My />
+                <MyWork />
                 <Pickle />
+                <Others />
+                {/* <OtherWorks /> */}
+                <Appeal />
                 <Page_2>
-                    <Text size="24px" mobile_size="14px" color="#fff" font_family="NotoSansCJKkr-Light">
+                    <Text size="24px" mobile_size="14px" color="#000" font_family="NotoSansCJKkr-Light">
                         📮&nbsp;&nbsp; 함께 나누고 싶은 얘기가 있으시다면
                     </Text>
                     <Column align_items="center">
@@ -35,12 +79,13 @@ export default class Main extends Component {
                             mobile_top="35px"
                             size="82px"
                             mobile_size="32px"
-                            color="#fff"
+                            color="#000"
                             hover_size="77px"
                             mobile_hover_size="25px"
-                            hover_color="#4970bd"
+                            hover_color="#4460aa"
                             cursor="pointer"
                             transition="all 0.3s"
+                            onClick={() => window.open(`${URL_FRONT}/contact`)}
                         >
                             kibin3846@gmail.com
                         </Text>
@@ -60,3 +105,10 @@ export default class Main extends Component {
         );
     }
 }
+
+export default connect(
+    (state) => ({
+        scroll: state.layout.get("scroll"),
+    }),
+    (dispatch) => ({}),
+)(Main);
