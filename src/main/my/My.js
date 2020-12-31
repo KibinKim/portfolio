@@ -24,7 +24,15 @@ class My extends Component {
                 align_items="center"
                 mobile_letter_spacing="-2px"
             >
-                <SideText ab_right="150px" color="light_gray" scroll={scroll} active={1700}>
+                <SideText
+                    ab_right="150px"
+                    mobile_ab_right="40px"
+                    color="light_gray"
+                    scroll={scroll}
+                    active={1700}
+                    mobile_active={700}
+                    mobile_transform="translateY(-30px)"
+                >
                     {" "}
                     저를 소개합니다 -{" "}
                 </SideText>

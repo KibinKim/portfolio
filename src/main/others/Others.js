@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Column, Row, Text } from "common/styleUtil";
+import { Container, Column, Row, Text, MobileBr } from "common/styleUtil";
 import { CodeImg } from "main/pickle/styleUtil";
 import { WorkButton } from "main/styleUtil";
 import notion_dom from "assets/img/notion_dom.png";
@@ -25,40 +25,50 @@ export default class Others extends Component {
             >
                 <Text
                     size="28px"
+                    mobile_size="25px"
                     color="dark_gray"
                     text_align="center"
                     height="1.75"
                     font_family="NotoSansCJKkr-Medium"
                 >
                     전 요즘, <br />
-                    이런저런 기록을 남기고있어요 ✍🏼
+                    이런저런 기록을 <MobileBr /> 남기고있어요 ✍🏼
                 </Text>
-                <Row width="100%" top="70px">
-                    <Column width="50%" align_items="center">
-                        <Column height="730px" align_items="center" justify_content="center">
+                <Row width="100%" top="70px" mobile_top="60px" mobile_direction="column">
+                    <Column width="50%" mobile_width="100%" align_items="center">
+                        <Column height="730px" mobile_height="230px" align_items="center" justify_content="center">
                             <CodeImg
                                 position="absolute"
                                 width="370px"
+                                mobile_width="170px"
                                 height="400px"
+                                mobile_height="180px"
                                 hover_shadow="0 0 17px 20px #f0f0f0"
                                 z_index="2"
                                 transform="translate(140px, 130px)"
+                                mobile_transform="translate(60px,70px)"
                                 src={project_cely}
                             />
                             <CodeImg
                                 position="absolute"
                                 width="380px"
+                                mobile_width="200px"
                                 height="200px"
+                                mobile_height="100px"
                                 hover_shadow="0 0 17px 20px #f0f0f0"
                                 z_index="1"
                                 transform="translate(-160px, -190px)"
+                                mobile_transform="translate(-40px,-70px)"
                                 src={project_eyes}
                             />
                             <CodeImg
                                 position="absolute"
                                 width="440px"
+                                mobile_width="230px"
                                 height="400px"
+                                mobile_height="200px"
                                 hover_shadow="0 0 17px 20px #f0f0f0"
+                                mobile_transform="translateY(20px)"
                                 z_index="3"
                                 src={project_main}
                             />
@@ -66,6 +76,7 @@ export default class Others extends Component {
                         <WorkButton
                             d
                             top="50px"
+                            mobile_top="100px"
                             border="solid 1px #000"
                             font_color="#000"
                             color="#000"
@@ -74,40 +85,48 @@ export default class Others extends Component {
                             }
                         />
                     </Column>
-
-                    <Column width="50%" align_items="center">
-                        <Column height="730px" align_items="center" justify_content="center">
+                    <Column width="50%" mobile_width="100%" mobile_top="170px" align_items="center">
+                        <Column height="730px" mobile_height="230px" align_items="center" justify_content="center">
                             <CodeImg
                                 position="absolute"
                                 width="270px"
+                                mobile_width="170px"
                                 height="400px"
+                                mobile_height="230px"
                                 hover_shadow="0 0 17px 20px #1a1a1a"
                                 z_index="3"
                                 transform="translate(-170px, 130px)"
+                                mobile_transform="translate(-40px,50px)"
                                 src={notion_js}
                             />
                             <CodeImg
                                 position="absolute"
                                 width="380px"
+                                mobile_width="180px"
                                 height="400px"
+                                mobile_height="200px"
                                 hover_shadow="0 0 17px 20px #1a1a1a"
                                 z_index="2"
                                 transform="translate(-190px, -110px)"
+                                mobile_transform="translate(-50px,-100px)"
                                 src={notion_lifecycle}
                             />
                             <CodeImg
                                 position="absolute"
-                                width="300px"
-                                height="400px"
+                                width="180px"
+                                height="250px"
                                 hover_shadow="0 0 17px 20px #1a1a1a"
                                 z_index="2"
                                 transform="translate(200px, -80px)"
+                                mobile_transform="translate(50px,-40px)"
                                 src={notion_router}
                             />
                             <CodeImg
                                 position="absolute"
                                 width="350px"
+                                mobile_width="180px"
                                 height="400px"
+                                mobile_height="210px"
                                 hover_shadow="0 0 17px 20px #1a1a1a"
                                 z_index="4"
                                 src={notion_dom}
@@ -115,6 +134,7 @@ export default class Others extends Component {
                         </Column>
                         <WorkButton
                             top="50px"
+                            mobile_top="100px"
                             border="solid 1px #000"
                             font_color="#000"
                             color="#000"

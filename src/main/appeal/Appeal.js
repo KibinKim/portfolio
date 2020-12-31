@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Column, Row, Text, SideText } from "common/styleUtil";
+import { Container, Column, Row, Text, SideText, MobileBr } from "common/styleUtil";
 import { TypingText, ItemText } from "main/appeal/styleUtil";
 import { WorkButton } from "main/styleUtil";
 import { connect } from "react-redux";
@@ -29,7 +29,15 @@ class Appeal extends Component {
         const { scroll } = this.props;
         const { typingStart } = this;
         return (
-            <Container padding_top="160px" padding_bottom="130px" color="#fafafa">
+            <Container
+                padding_top="160px"
+                mobile_padding_top="50px"
+                padding_bottom="130px"
+                mobile_padding_bottom="50px"
+                mobile_padding_left="30px"
+                mobile_padding_right="30px"
+                color="#fafafa"
+            >
                 <SideText
                     ab_right
                     ab_left="150px"
@@ -37,29 +45,52 @@ class Appeal extends Component {
                     color="light_gray"
                     scroll={scroll}
                     active={5800}
+                    mobile_active={4400}
                     onAnimationStart={() => (document.getElementById("typing").innerText = "")}
                     onAnimationEnd={typingStart}
+                    mobile_transform="translate(-100px, 20px)"
                 >
                     그래서 말이죠 -
                 </SideText>
-                <Text display="none" id="text">
+                <Text display="none" mobile_display="none" id="text">
                     함께 일할 멋진 웹 개발자를 찾고 계신가요?
                 </Text>
-                <Row top="80px" height="125px" white_space="nowrap" justify_content="center">
-                    <TypingText display="block" id="typing" scroll={scroll} active={5800}></TypingText>
+                <Row
+                    top="80px"
+                    mobile_top="20px"
+                    height="125px"
+                    mobile_height="30px"
+                    white_space="nowrap"
+                    justify_content="center"
+                >
+                    <TypingText display="block" id="typing"></TypingText>
                 </Row>
                 <Row
                     width="50%"
+                    mobile_width="100%"
                     top="100px"
+                    mobile_top="70px"
                     padding_left="30px"
                     padding_right="30px"
                     align_self="center"
                     white_space="nowrap"
+                    mobile_direction="column"
                 >
-                    <Row width="50%" top="70px" right="80px" align_items="flex-start" justify_content="flex-end">
+                    <Row
+                        width="50%"
+                        mobile_width="100%"
+                        top="70px"
+                        mobile_top="0px"
+                        right="80px"
+                        mobile_right="0px"
+                        align_items="flex-start"
+                        justify_content="flex-end"
+                        mobile_justify_content="flex-start"
+                    >
                         <Text
                             color="dark_gray"
                             size="32px"
+                            mobile_size="25px"
                             height="1.76"
                             letter_spacing="2px"
                             font_family="NotoSansCJKkr-Bold"
@@ -68,10 +99,13 @@ class Appeal extends Component {
                             어울릴 것 같아요
                         </Text>
                     </Row>
-                    <Row width="1px" height="410px" color="#8b8b8b" />
-                    <Column width="50%" top="70px" left="80px">
+                    <Row desktop width="1px" height="410px" color="#8b8b8b" />
+                    <Column width="50%" mobile_width="100%" top="70px" mobile_top="30px" left="80px" mobile_left="0px">
                         <ItemText>경험을 갖춘 웹 퍼블리셔가 필요할 때</ItemText>
-                        <ItemText>책임감 있고 함께 일할 때 시너지를 주는 팀원이 필요할 때</ItemText>
+                        <ItemText>
+                            책임감 있고 함께 일할 때 시너지를 주는 팀원이 <MobileBr />
+                            필요할 때
+                        </ItemText>
                         <ItemText>열정이 있으며 성장하는 사람이 필요할 때</ItemText>
                         <ItemText font_family="NotoSansCJKkr-Bold">좋아하는 일을 잘하는 사람이 필요할 때</ItemText>
                         <WorkButton

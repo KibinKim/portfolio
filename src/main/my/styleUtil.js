@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { FadeIn, ShakeAnim } from "anim/styleUtil";
-import { Container, Column, Text } from "common/styleUtil";
+import { Container, Column, Text, media } from "common/styleUtil";
 
 export const MyContainer = styled(Container)`
     ${(props) =>
@@ -13,7 +13,10 @@ export const MyContainer = styled(Container)`
 export const TextArea = styled(Column)`
     margin-right: 100px;
     letter-spacing: 5px;
-    text-align: right;
+    align-items: flex-end;
+    ${media.phone`
+        margin-right: 0px;
+      `};
 `;
 
 export const ShakeText = styled(Text)`

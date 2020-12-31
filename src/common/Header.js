@@ -36,6 +36,7 @@ class Header extends Component {
             <HeaderContainer onScroll={this.handleScroll}>
                 {scroll_top > 2250 ? (
                     <ChangedHeaderBox
+                        desktop
                         color={scroll_top > 2250 ? "#000" : "v_light_gray"}
                         font_family="NotoSansCJKkr-Light"
                         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -45,6 +46,28 @@ class Header extends Component {
                     </ChangedHeaderBox>
                 ) : (
                     <HeaderText
+                        desktop
+                        color="v_light_gray"
+                        font_family="NotoSansCJKkr-Light"
+                        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                        scroll_top={scroll_top}
+                    >
+                        Kibin's Web Portfolio
+                    </HeaderText>
+                )}
+                {scroll_top > 130 ? (
+                    <ChangedHeaderBox
+                        mobile
+                        color={scroll_top > 1140 ? "#000" : "v_light_gray"}
+                        font_family="NotoSansCJKkr-Light"
+                        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                        scroll_top={scroll_top}
+                    >
+                        KWP
+                    </ChangedHeaderBox>
+                ) : (
+                    <HeaderText
+                        mobile
                         color="v_light_gray"
                         font_family="NotoSansCJKkr-Light"
                         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -55,6 +78,7 @@ class Header extends Component {
                 )}
                 <HeaderMail
                     color={scroll_top > 2250 ? "#000" : "v_light_gray"}
+                    mobile_color={scroll_top > 1140 ? "#000" : "v_light_gray"}
                     scroll_top={scroll_top}
                     onClick={() => window.open(`${URL_FRONT}/contact`)}
                 >

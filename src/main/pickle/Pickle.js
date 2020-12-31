@@ -108,21 +108,38 @@ class Pickle extends Component {
                     padding_right="130px"
                     mobile_padding_right="30px"
                     padding_top="150px"
-                    mobile_padding_top="50px"
+                    mobile_padding_top="80px"
                     padding_bottom="150px"
-                    mobile_padding_bottom="50px"
+                    mobile_padding_bottom="80px"
                     color="#11c78f"
                     position="relative"
                 >
-                    <SideText top="60px" ab_left="100px" color="v_light_gray" scroll={scroll} active={3720}>
+                    <SideText
+                        ab_left="100px"
+                        mobile_ab_left="unset"
+                        color="v_light_gray"
+                        scroll={scroll}
+                        active={3720}
+                        mobile_active={3470}
+                        mobile_transform="translateY(-40px)"
+                    >
                         {" "}
                         이 쯤에서{" "}
                     </SideText>
-                    <SideText top="30px" ab_left="70px" color="v_light_gray" scroll={scroll} active={3720}>
+                    <SideText
+                        top="30px"
+                        ab_left="70px"
+                        mobile_ab_left="unset"
+                        color="v_light_gray"
+                        scroll={scroll}
+                        active={3720}
+                        mobile_active={3470}
+                        mobile_transform="translateY(-40px)"
+                    >
                         {" "}
                         작업물을 살펴볼게요 -{" "}
                     </SideText>
-                    <Column align_items="center">
+                    <Column align_items="center" mobile_top="30px">
                         <LottieResponsive
                             isClickToPauseDisabled={true}
                             options={{
@@ -134,7 +151,7 @@ class Pickle extends Component {
                                 },
                             }}
                             height="360px"
-                            mobile_height="260px"
+                            mobile_height="240px"
                         ></LottieResponsive>
                         <Text
                             color="#fff"

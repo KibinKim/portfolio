@@ -1,17 +1,19 @@
 import styled, { css } from "styled-components";
-import { Text } from "common/styleUtil";
+import { Text, media } from "common/styleUtil";
 import { Cursor2 } from "anim/styleUtil";
 
 export const TypingText = styled(Text)`
     font-size: 100px;
     width: max-content;
     color: transparent;
-    margin-left: 18px;
     display: ${(props) => props.display};
     animation: ${Cursor2} 0.6s infinite;
     -webkit-text-stroke: 1px #1a1a1a;
     -webkit-font-smoothing: antialiased;
     transition: all 0.8s;
+    ${media.phone`
+        font-size: 20px;
+    `};
 `;
 
 export const ItemText = styled(Text)`
@@ -27,4 +29,7 @@ export const ItemText = styled(Text)`
         background-color: #141414;
         content: "";
     }
+    ${media.phone`
+        font-size: 15px;
+    `};
 `;

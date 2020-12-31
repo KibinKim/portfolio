@@ -432,7 +432,7 @@ export const Text = styled.div`
         font-size: ${(props) => props.hover_size};
     }
     ${media.phone`
-        display: ${(props) => (props.desktop ? "none" : "block")};
+        display: ${(props) => props.mobile_display || "block"};
         width: ${(props) => props.mobile_width};
         font-family: ${(props) => props.mobile_font_family};
         text-align: ${(props) => props.mobile_text_align};
@@ -493,6 +493,7 @@ export const Img = styled.img`
         margin-top: ${(props) => props.mobile_top || ""};
         margin-left:${(props) => props.mobile_left};
         margin-right: ${(props) => props.mobile_right || ""};
+        transform: ${(props) => props.mobile_transform || ""};
 
     `}
 `;
@@ -597,25 +598,24 @@ export const FooterContainer = styled.div`
 `;
 
 export const HeaderText = styled(Text)`
+    display: ${(props) => (props.desktop ? "block" : "none")};
     font-size: 15px;
     animation: ${(props) => props.anim || FadeIn} 0.8s ease-in;
     margin-left: 3%;
+    font-family: NotoSansCJKkr-Light;
     &:hover {
         cursor: pointer;
         color: #4460aa;
     }
-    ${(props) =>
-        props.scroll_top > 100 &&
-        css`
-            animation: ${FadeIn} 1s ease-in;
-        `}
     ${media.phone`
-      font-size: 6px;
+    display: ${(props) => (props.desktop ? "none" : "block")};
+    font-family: NotoSansCJKkr;
+      font-size: 10px;
     `}
 `;
 
 export const ChangedHeaderBox = styled(Text)`
-    display: flex;
+    display: ${(props) => (props.desktop ? "flex" : "none")};
     width: 40px;
     height: 40px;
     font-size: 15px;
@@ -624,19 +624,19 @@ export const ChangedHeaderBox = styled(Text)`
     border: solid 1px ${(props) => (props.color === "#000" ? "#000" : "#e6e6e6")};
     align-items: center;
     justify-content: center;
+    font-family: NotoSansCJKkr-Light;
     animation: ${(props) => props.anim || FadeIn} 0.8s ease-in;
     &:hover {
         border: solid 1px #4460aa;
         cursor: pointer;
         color: #4460aa;
     }
-    ${(props) =>
-        props.scroll_top < 100 &&
-        css`
-            animation: FadeIn 1s ease-in;
-        `}
     ${media.phone`
-        font-size: 6px;
+    display: ${(props) => (props.desktop ? "none" : "flex")};
+        font-family: NotoSansCJKkr;
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
       `}
 `;
 
@@ -653,11 +653,18 @@ export const HeaderMail = styled(Text)`
     ${(props) =>
         props.scroll_top > 2250 &&
         css`
-            transform: matrix(0, 0.9, -0.9, 0, 0, 102) translateX(-17px);
+            transform: matrix(0, 0.9, -0.9, 0, 0, 102) translateX(-63px);
             transition: transform 0.8s, color 0.15s ease-out;
         `}
     ${media.phone`
-        font-size: 6px;
+        font-size: 10px;
+        font-family: NotoSansCJKkr;
+        ${(props) =>
+            props.scroll_top > 130 &&
+            css`
+                transform: matrix(0, 0.9, -0.9, 0, 30, 102) translateX(-75px);
+                transition: transform 0.8s, color 0.15s ease-out;
+            `}
       `}
 `;
 
@@ -677,9 +684,21 @@ export const SideText = styled(Text)`
     ${(props) =>
         props.scroll > props.active &&
         css`
-            animation: ${SlideInTop} 2s ease-in;
+            animation: ${SlideInTop} 1.5s ease-in;
             opacity: 1;
         `}
+    ${media.phone`
+    font-size: 15px;
+    transform: ${(props) => props.mobile_transform || "none"};
+    right: ${(props) => props.mobile_ab_right};
+    left: ${(props) => props.mobile_ab_left};
+    ${(props) =>
+        props.scroll > props.mobile_active &&
+        css`
+            animation: ${SlideInTop} 1s ease-in;
+            opacity: 1;
+        `}
+      `}
 `;
 
 export const setButtonAnimation = () => {

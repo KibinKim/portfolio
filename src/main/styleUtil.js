@@ -24,11 +24,14 @@ export const Page_1 = styled.div`
     background-position: center;
     background-attachment: fixed;
     ${media.phone`
-        height: 500px;
+        height: 700px;
         padding-top: 150px;
         padding-left: 30px;
         padding-right: 30px;
-        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
     `}
 `;
 
@@ -59,7 +62,7 @@ const WorkButtonBase = styled(Row)`
         filter: grayscale(0.4) opacity(0.6);
     }
     ${media.phone`
-        font-size: 14px;
+        font-size: 12px;
         margin-top: ${(props) => props.mobile_top};
     `}
 `;
@@ -95,8 +98,7 @@ export const WorkButton = (props) => {
             <Row
                 left="10px"
                 width={props.a || props.b ? "130px" : "80px"}
-                s
-                mobile_width="80px"
+                mobile_width={props.a || props.b ? "80px" : "50px"}
                 height="1px"
                 color={props.color}
             />
