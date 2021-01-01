@@ -9,6 +9,10 @@ export const SkillCircle = styled(Circle)`
     border-radius: 60px;
     background-color: #11c78f;
     filter: opacity(0.6);
+    ${media.phone`
+        width: 80px;
+        height: 80px;
+    `};
 `;
 
 export const CheckImg = styled(Img)`
@@ -88,6 +92,9 @@ export const BorderText = styled(Text)`
     white-space: nowrap;
     -webkit-text-stroke: 2px #1a1a1a;
     -webkit-font-smoothing: antialiased;
+    ${media.phone`
+        font-size: 40px;
+    `}
 `;
 
 const PhoneAnimation = keyframes`
@@ -105,9 +112,8 @@ export const PhoneBox = styled(Column)`
     align-items: center;
     ${media.phone`
         position: static;
-        width: 480px;
-        height: 599px;
-        margin-top: 14px;
+        width: 280px;
+        height: 600px;
     `}
 `;
 
@@ -119,6 +125,7 @@ export const PhoneFrame = styled.img.attrs({
     height: 736px;
     ${media.phone`
         width: 435px;
+        height: 600px;
     `}
 `;
 
@@ -129,7 +136,7 @@ export const PhoneDisplayFrame = styled.div`
     ${media.phone`
         width: 235px;
         height: 508px;
-        transform: translate(4px, -10px);
+        transform: translate(3px, -555px);
     `}
 `;
 
@@ -140,7 +147,7 @@ export const PhoneDisplay = styled.img`
     z-index: 1;
     ${media.phone`
         width: 235px;
-        height: 508px;
+        height: 495px;
     `}
     ${(props) =>
         props.selected &&

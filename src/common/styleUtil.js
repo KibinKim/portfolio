@@ -166,6 +166,7 @@ export const Container = styled.div`
     box-shadow: ${(props) => props.box_shadow || ""};
     border-radius: ${(props) => props.border_radius};
     transition: ${(props) => props.transition};
+    position: ${(props) => props.position || ""};
     ${media.phone`
         display: ${(props) => (props.desktop ? "none" : "flex")};
         margin-top: ${(props) => props.mobile_top};
@@ -192,6 +193,11 @@ export const Container = styled.div`
         box-shadow: ${(props) => props.mobile_box_shadow || ""};
         border-radius: ${(props) => props.mobile_border_radius};
         transition: ${(props) => props.mobile_transition};
+        position: ${(props) => props.mobile_position || ""};
+        top: ${(props) => props.mobile_ab_top};
+        bottom: ${(props) => props.mobile_ab_bottom};
+        left: ${(props) => props.mobile_ab_left};
+        right: ${(props) => props.mobile_ab_right};
 `};
 `;
 
@@ -258,6 +264,8 @@ export const Row = styled.div`
         order: ${(props) => props.mobile_order || ""};
         border: ${(props) => props.mobile_border || ""};
         border-radius: ${(props) => props.mobile_border_radius || ""};
+        transform: ${(props) => props.mobile_transform || ""};
+        position: ${(props) => props.mobile_position || ""};
     `}
 `;
 
@@ -310,6 +318,7 @@ export const Column = styled.div`
         padding-left: ${(props) => props.mobile_padding_left};
         max-width: ${(props) => props.mobile_max_width};
         min-width: ${(props) => props.mobile_min_width};
+        min-height: ${(props) => props.mobile_min_height};
         flex-grow: ${(props) => props.mobile_grow};
         flex-basis: ${(props) => props.mobile_basis};
         width: ${(props) => props.mobile_width};
@@ -322,6 +331,8 @@ export const Column = styled.div`
         box-shadow: ${(props) => props.mobile_box_shadow || ""};
         order: ${(props) => props.mobile_order || ""};
         border-radius: ${(props) => props.mobile_border_radius || ""};
+        position: ${(props) => props.mobile_position || ""};
+        transform: ${(props) => props.mobile_transform || ""};
     `}
 `;
 
@@ -560,7 +571,17 @@ export const MobileBr = styled.br`
 `;
 
 export const LottieResponsive = (props) => {
-    let { flex_direction, width, height, mobile_width, mobile_height, style, ...tmp_props } = props;
+    let {
+        flex_direction,
+        width,
+        height,
+        mobile_width,
+        mobile_height,
+        mobile_ab_top,
+        mobile_ab_left,
+        style,
+        ...tmp_props
+    } = props;
     return (
         <Container
             flex_direction={props.flex_direction}
@@ -568,6 +589,9 @@ export const LottieResponsive = (props) => {
             height={props.height}
             mobile_width={props.mobile_width}
             mobile_height={props.mobile_height}
+            mobile_position={props.mobile_position}
+            mobile_ab_top={props.mobile_ab_top}
+            mobile_ab_left={props.mobile_ab_left}
             style={props.style}
         >
             <Lottie width="100%" height="100%" {...tmp_props} />

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Column, Row, Text, Img } from "common/styleUtil";
+import { Column, Row, Text, Img, MobileBr, DesktopBr } from "common/styleUtil";
 import { CodeImg } from "main/pickle/styleUtil";
 import { WorkButton } from "main/styleUtil";
 import pickle_axios from "assets/img/pickle_code_axios.png";
@@ -17,64 +17,111 @@ export default class EtcPage extends Component {
         return (
             <Column
                 padding_top="110px"
+                mobile_padding_top="30px"
                 padding_bottom="110px"
+                mobile_padding_bottom="30px"
                 padding_left="110px"
+                mobile_padding_left="15px"
                 padding_right="110px"
+                mobile_padding_right="15px"
                 color="#eff2fb"
             >
-                <Text size="20px" font_family="NotoSansCJKkr-Bold">
+                <Text size="20px" mobile_size="18px" font_family="NotoSansCJKkr-Bold">
                     또 무엇을 공부했냐면요 🥸
                 </Text>
-                <Text top="60px" size="16px" color="dark_gray">
+                <Text top="60px" mobile_top="40px" size="16px" mobile_size="14px" color="dark_gray">
                     토큰 기반 인증을 통해 보안을 강화시킵니다
                 </Text>
-                <Text top="15px" size="14px" height="24px" color="dark_gray" font_family="NotoSansCJKkr-Light">
+                <Text
+                    top="15px"
+                    size="14px"
+                    mobile_size="12px"
+                    height="24px"
+                    mobile_height="22px"
+                    color="dark_gray"
+                    font_family="NotoSansCJKkr-Light"
+                >
                     JWT를 통해 서버 기반의 인증 시스템과 달리 상태를 유지하지 않는 Stateless한 구조를 가지기 때문에
                     기존에 존재하던 확장성, CORS의 문제를 해결 할 수 있었습니다. <br />
                     또, 사용자의 데이터가 필요하여 서버와 통신을 할 때에는 token을 사용하여 보안성을 높였습니다.
                 </Text>
-                <Text top="80px" size="16px" color="dark_gray">
+                <Text
+                    top="80px"
+                    mobile_top="40px"
+                    size="16px"
+                    mobile_size="14px"
+                    color="dark_gray"
+                    mobile_align_self="flex-end"
+                >
                     백엔드와 REST하게 통신합니다
                 </Text>
-                <Row top="30px" align_items="center" justify_content="space-between">
-                    <Row>
+                <Row
+                    top="30px"
+                    mobile_top="15px"
+                    align_items="center"
+                    mobile_align_items="flex-end"
+                    justify_content="space-between"
+                >
+                    <Row desktop>
                         <CodeImg width="350px" height="270px" src={pickle_axios} />
                         <CodeImg left="8px" width="360px" height="330px" src={pickle_communication} />
                     </Row>
                     <Text
                         left="30px"
+                        mobile_left="0px"
                         size="14px"
+                        mobile_size="12px"
                         height="24px"
+                        mobile_height="22px"
                         color="dark_gray"
                         text_align="center"
+                        mobile_text_align="right"
                         font_family="NotoSansCJKkr-Light"
                     >
-                        피클플러스는 서버와 데이터를 주고 받아야하는 페이지가 많았기 때문에 <br /> 클라이언트와 서버 간
-                        통신에 대해 학습하고 기반이 되는 코드를 탄탄하게 구현하였습니다.
+                        피클플러스는 서버와 데이터를 주고 받아야하는 페이지가 많았기 때문에 <DesktopBr /> 클라이언트와
+                        서버 간 통신에 대해 학습하고 기반이 되는 코드를 탄탄하게 구현하였습니다.
                         <br />
                         <br />
-                        rest api를 기반으로 axios를 사용하여 HttpRequest를 만들었으며, <br />
+                        rest api를 기반으로 axios를 사용하여 HttpRequest를 만들었으며, <DesktopBr />
                         모든 통신에는 try-catch문으로 어떠한 예외적인 상황에도 대응할 수 있도록 하였습니다.
                     </Text>
                 </Row>
-                <Text top="80px" size="16px" color="dark_gray" align_self="flex-end">
+                <Text
+                    top="80px"
+                    mobile_top="40px"
+                    size="16px"
+                    mobile_size="14px"
+                    color="dark_gray"
+                    align_self="flex-end"
+                    mobile_align_self="flex-start"
+                >
                     실시간으로 데이터를 주고 받습니다
                 </Text>
-                <Row top="30px" align_items="center" justify_content="space-between">
+                <Row
+                    top="30px"
+                    mobile_top="15px"
+                    align_items="center"
+                    mobile_align_items="flex-start"
+                    justify_content="space-between"
+                >
                     <Text
                         size="14px"
+                        mobile_size="12px"
                         height="24px"
+                        mobile_height="22px"
                         color="dark_gray"
                         text_align="center"
+                        mobile_text_align="left"
                         font_family="NotoSansCJKkr-Light"
                     >
-                        web socket으로 백 엔드에서 실시간으로 데이터를 받아와 <br />
-                        모달을 띄워주며 사용자에게 카카오톡 메시지를 전송해줍니다. <br />
+                        web socket으로 백 엔드에서 실시간으로 데이터를 받아와 <DesktopBr />
+                        모달을 띄워주며 사용자에게 카카오톡 메시지를 전송해줍니다.
+                        <br />
                         <br />
                         피클플러스에서 핵심 기능인 실시간 자동 매칭에서 사용되며,
-                        <br /> 페이지에서 이탈하더라도 뒷 단에서 기능을 동작시키기 위하여 구현시켰습니다.
+                        <DesktopBr /> 페이지에서 이탈하더라도 뒷 단에서 기능을 동작시키기 위하여 구현시켰습니다.
                     </Text>
-                    <Column left="30px" align_items="center">
+                    <Column desktop left="30px" align_items="center">
                         <CodeImg width="500px" height="180px" src={pickle_authconnect} />
                         <Row top="8px">
                             <CodeImg width="460px" height="370px" src={pickle_opensocket} />
@@ -89,7 +136,7 @@ export default class EtcPage extends Component {
                         </Row>
                     </Column>
                 </Row>
-                <Column align_items="center" top="120px" height="1050px">
+                <Column desktop align_items="center" top="120px" height="1050px">
                     <Text
                         size="18px"
                         color="dark_gray"

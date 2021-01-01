@@ -62,12 +62,37 @@ class Pickle extends Component {
                             />
                             <ScrollColumn id="contents" onScroll={this.handleScroll}>
                                 <Img src={pickle_landing} width="100%" height="auto" />
-                                <Column padding_bottom="110px" padding_left="110px" padding_right="110px">
-                                    <Img src={pickle_logo} width="350px" height="auto" />
-                                    <Text top="40px" size="16px" font_family="NotoSansCJKkr-Medium">
+                                <Column
+                                    padding_bottom="110px"
+                                    mobile_padding_bottom="50px"
+                                    padding_left="110px"
+                                    mobile_padding_left="0px"
+                                    padding_right="110px"
+                                    mobile_padding_right="0px"
+                                >
+                                    <Img
+                                        src={pickle_logo}
+                                        width="350px"
+                                        mobile_width="160px"
+                                        mobile_top="30px"
+                                        height="auto"
+                                    />
+                                    <Text
+                                        top="40px"
+                                        mobile_top="30px"
+                                        size="16px"
+                                        mobile_size="14px"
+                                        font_family="NotoSansCJKkr-Medium"
+                                    >
                                         Web Development 100%
                                     </Text>
-                                    <Text top="10px" size="12px" color="light_gray" font_family="NotoSansCJKkr-Light">
+                                    <Text
+                                        top="10px"
+                                        size="12px"
+                                        mobile_size="8px"
+                                        color="light_gray"
+                                        font_family="NotoSansCJKkr-Light"
+                                    >
                                         #구독 요금 &nbsp; #정산 &nbsp; #자동 결제 &nbsp; #실시간 매칭 <br />
                                         #리액트 환경 &nbsp; #반응형 &nbsp; #역동적인 &nbsp; #유지보수
                                     </Text>
@@ -79,8 +104,15 @@ class Pickle extends Component {
                                 <MobilePage />
                                 <EtcPage />
                                 <CoworkPage />
-                                <Column align_items="center" padding_top="13px" padding_bottom="13px" color="#000">
-                                    <Text size="15px" color="#4fdad5">
+                                <Column
+                                    align_items="center"
+                                    padding_top="13px"
+                                    mobile_padding_top="8px"
+                                    padding_bottom="13px"
+                                    mobile_padding_bottom="8px"
+                                    color="#000"
+                                >
+                                    <Text size="15px" mobile_size="12px" color="#4fdad5">
                                         kibin<span style={{ color: "#fff" }}>.</span>
                                         <span style={{ color: "#f2ee72" }}>say</span>
                                         <span style={{ color: "#fff" }}>(</span>
@@ -95,8 +127,6 @@ class Pickle extends Component {
                         this.setState({ modal_open: false });
                     }}
                     width="calc(100vw - 40px)"
-                    min_height="730px"
-                    mobile_width="calc(100vw - 50px)"
                     max_width="1620px"
                     border_radius="6px"
                 />
