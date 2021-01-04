@@ -25,7 +25,6 @@ export const Page_1 = styled.div`
     background-attachment: fixed;
     ${media.phone`
         height: 700px;
-        padding-top: 150px;
         padding-left: 30px;
         padding-right: 30px;
         background-size: cover;
@@ -109,17 +108,42 @@ export const WorkButton = (props) => {
 export const SlideInText = styled(Text)`
     font-family: ${(props) => props.font_family || "NotoSansCJKkr"};
     color: #fff;
+    white-space: nowrap;
     letter-spacing: 1px;
     animation: ${SlideIn} ${(props) => props.second} ease-in;
     ${media.tablet`
         font-size: ${(props) => props.tablet_size || "40px"}; 
     `}
     ${media.phone`
-        font-size: ${(props) => props.mobile_size || "20px"}; 
+        font-size: ${(props) => props.mobile_size || "30px"}; 
     `}
 `;
 
 export const BounceText = styled(Text)`
     animation: ${BounceAnim} 0.8s;
     animation-iteration-count: 2;
+`;
+
+export const Email = styled(Text)`
+    margin-top: 70px;
+    font-size: 82px;
+    color: #000;
+    transition: all 0.3s;
+    &:hover {
+        font-size: 77px;
+        color: #4460aa;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 850px) {
+        font-size: 52px;
+        &:hover {
+            font-size: 47px;
+        }
+    }
+    ${media.phone`
+        font-size: 32px;
+        &:hover {
+            font-size: 27px;
+        }
+    `}
 `;

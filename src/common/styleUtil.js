@@ -5,9 +5,9 @@ import { HeartAnim, FadeIn, SlideInTop, ModalOpen } from "anim/styleUtil";
 
 //media query를 통한 자동 리사이징
 export const sizes = {
-    wide: "1170px",
+    wide: "1400px",
     desktop: "992px",
-    tablet: "755px",
+    tablet: "768px",
     phone: "663px",
     mini: "340px",
 };
@@ -607,7 +607,6 @@ export const HeaderContainer = styled.div`
     top: 5%;
     z-index: 3;
     ${media.phone`
-      width: 375px;
       top: 2%;
     `}
 `;

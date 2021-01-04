@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Column, Row, Text, MobileBr } from "common/styleUtil";
-import { CodeImg } from "main/pickle/styleUtil";
+import { OthersImg, OthersRow } from "main/others/styleUtil";
 import { WorkButton } from "main/styleUtil";
 import notion_dom from "assets/img/notion_dom.png";
 import notion_js from "assets/img/notion_js.png";
@@ -34,40 +34,39 @@ export default class Others extends Component {
                     전 요즘, <br />
                     이런저런 기록을 <MobileBr /> 남기고있어요 ✍🏼
                 </Text>
-                <Row width="100%" top="70px" mobile_top="60px" mobile_direction="column">
+                <OthersRow width="100%" top="70px" mobile_top="60px" mobile_direction="column">
                     <Column width="50%" mobile_width="100%" align_items="center">
                         <Column height="730px" mobile_height="230px" align_items="center" justify_content="center">
-                            <CodeImg
-                                position="absolute"
+                            <OthersImg
+                                white
                                 width="370px"
                                 mobile_width="170px"
                                 height="400px"
                                 mobile_height="180px"
-                                hover_shadow="0 0 17px 20px #f0f0f0"
                                 z_index="2"
                                 transform="translate(140px, 130px)"
                                 mobile_transform="translate(60px,70px)"
                                 src={project_cely}
                             />
-                            <CodeImg
-                                position="absolute"
+                            <OthersImg
+                                white
                                 width="380px"
                                 mobile_width="200px"
                                 height="200px"
                                 mobile_height="100px"
-                                hover_shadow="0 0 17px 20px #f0f0f0"
                                 z_index="1"
                                 transform="translate(-160px, -190px)"
                                 mobile_transform="translate(-40px,-70px)"
                                 src={project_eyes}
                             />
-                            <CodeImg
-                                position="absolute"
+                            <OthersImg
+                                white
                                 width="440px"
                                 mobile_width="230px"
                                 height="400px"
                                 mobile_height="200px"
                                 hover_shadow="0 0 17px 20px #f0f0f0"
+                                transform="translate(0,0)"
                                 mobile_transform="translateY(20px)"
                                 z_index="3"
                                 src={project_main}
@@ -87,7 +86,7 @@ export default class Others extends Component {
                     </Column>
                     <Column width="50%" mobile_width="100%" mobile_top="170px" align_items="center">
                         <Column height="730px" mobile_height="230px" align_items="center" justify_content="center">
-                            <CodeImg
+                            <OthersImg
                                 position="absolute"
                                 width="270px"
                                 mobile_width="170px"
@@ -99,7 +98,7 @@ export default class Others extends Component {
                                 mobile_transform="translate(-40px,50px)"
                                 src={notion_js}
                             />
-                            <CodeImg
+                            <OthersImg
                                 position="absolute"
                                 width="380px"
                                 mobile_width="180px"
@@ -111,23 +110,26 @@ export default class Others extends Component {
                                 mobile_transform="translate(-50px,-100px)"
                                 src={notion_lifecycle}
                             />
-                            <CodeImg
+                            <OthersImg
                                 position="absolute"
-                                width="180px"
-                                height="250px"
+                                width="300px"
+                                mobile_width="180px"
+                                height="400px"
+                                mobile_height="250px"
                                 hover_shadow="0 0 17px 20px #1a1a1a"
                                 z_index="2"
                                 transform="translate(200px, -80px)"
                                 mobile_transform="translate(50px,-40px)"
                                 src={notion_router}
                             />
-                            <CodeImg
+                            <OthersImg
                                 position="absolute"
                                 width="350px"
                                 mobile_width="180px"
                                 height="400px"
                                 mobile_height="210px"
                                 hover_shadow="0 0 17px 20px #1a1a1a"
+                                transform="translate(0,0)"
                                 z_index="4"
                                 src={notion_dom}
                             />
@@ -141,7 +143,7 @@ export default class Others extends Component {
                             onClick={() => window.open("https://www.notion.so/25e108e015444345b07c7e0f809a7e02")}
                         />
                     </Column>
-                </Row>
+                </OthersRow>
             </Container>
         );
     }

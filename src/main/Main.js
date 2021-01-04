@@ -7,7 +7,7 @@ import Others from "main/others/Others";
 import OtherWorks from "main/otherworks/OtherWorks";
 import Appeal from "main/appeal/Appeal";
 import { Container, Column, Text } from "common/styleUtil";
-import { Page_1, Page_2, SlideInText, BounceText } from "./styleUtil";
+import { Page_1, Page_2, SlideInText, BounceText, Email } from "./styleUtil";
 import { connect } from "react-redux";
 import { device_check } from "common/config";
 
@@ -53,7 +53,6 @@ class Main extends Component {
                     <SlideInText
                         id="first_title"
                         size="90px"
-                        mobile_size="40px"
                         second="3s"
                         text_align="center"
                         font_family="NotoSansCJKkr-Bold"
@@ -63,12 +62,13 @@ class Main extends Component {
                             Web Developer
                         </Text>
                     </SlideInText>
-                    <Text
+                    <SlideInText
                         id="second_title"
                         top="700px"
                         mobile_top="400px"
                         size="70px"
-                        mobile_size="37px"
+                        mobile_size="25px"
+                        tablet_size="35px"
                         color="#fff"
                         text_align="center"
                         height="150px"
@@ -77,7 +77,7 @@ class Main extends Component {
                         style={{ transform: "scale(0)" }}
                     >
                         안녕하세요! <br /> 저는 김기빈입니다 :)
-                    </Text>
+                    </SlideInText>
                 </Page_1>
                 <My />
                 <MyWork />
@@ -90,22 +90,9 @@ class Main extends Component {
                         📮&nbsp;&nbsp; 함께 나누고 싶은 얘기가 있으시다면
                     </Text>
                     <Column align_items="center">
-                        <Text
-                            id="email"
-                            top="70px"
-                            mobile_top="35px"
-                            size="82px"
-                            mobile_size="32px"
-                            color="#000"
-                            hover_size="77px"
-                            mobile_hover_size="25px"
-                            hover_color="#4460aa"
-                            cursor="pointer"
-                            transition="all 0.3s"
-                            onClick={() => window.open(`${URL_FRONT}/contact`)}
-                        >
+                        <Email id="email" onClick={() => window.open(`${URL_FRONT}/contact`)}>
                             kibin3846@gmail.com
-                        </Text>
+                        </Email>
                         <BounceText
                             top="70px"
                             mobile_top="40px"

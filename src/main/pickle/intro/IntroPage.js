@@ -69,6 +69,7 @@ export default class IntroPage extends Component {
                             mobile_size="16px"
                             mobile_height="1.55"
                             font_family="NotoSansCJKkr-Medium"
+                            mobile_text_align="center"
                             color="#11c78f"
                         >
                             피클플러스는 2020년 5월 이후로 현재까지 계속 운영중인 서비스예요 :)

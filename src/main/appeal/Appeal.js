@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Column, Row, Text, SideText, MobileBr } from "common/styleUtil";
-import { TypingText, ItemText } from "main/appeal/styleUtil";
+import { AppealContainer, TypingText, ItemText } from "main/appeal/styleUtil";
 import { WorkButton } from "main/styleUtil";
 import { connect } from "react-redux";
 
@@ -65,19 +65,8 @@ class Appeal extends Component {
                 >
                     <TypingText display="block" id="typing"></TypingText>
                 </Row>
-                <Row
-                    width="50%"
-                    mobile_width="100%"
-                    top="100px"
-                    mobile_top="70px"
-                    padding_left="30px"
-                    padding_right="30px"
-                    align_self="center"
-                    white_space="nowrap"
-                    mobile_direction="column"
-                >
+                <AppealContainer>
                     <Row
-                        width="50%"
                         mobile_width="100%"
                         top="70px"
                         mobile_top="0px"
@@ -100,7 +89,7 @@ class Appeal extends Component {
                         </Text>
                     </Row>
                     <Row desktop width="1px" height="410px" color="#8b8b8b" />
-                    <Column width="50%" mobile_width="100%" top="70px" mobile_top="30px" left="80px" mobile_left="0px">
+                    <Column mobile_width="100%" top="70px" mobile_top="30px" left="80px" mobile_left="0px">
                         <ItemText>경험을 갖춘 웹 퍼블리셔가 필요할 때</ItemText>
                         <ItemText>
                             책임감 있고 함께 일할 때 시너지를 주는 팀원이 <MobileBr />
@@ -117,7 +106,7 @@ class Appeal extends Component {
                             onClick={() => window.open("https://www.notion.so/6d9ec2f67956418a81ea97a13198ff56")}
                         />
                     </Column>
-                </Row>
+                </AppealContainer>
             </Container>
         );
     }

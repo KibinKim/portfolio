@@ -150,7 +150,7 @@ class Pickle extends Component {
                         color="v_light_gray"
                         scroll={scroll}
                         active={3720}
-                        mobile_active={3470}
+                        mobile_active={2700}
                         mobile_transform="translateY(-40px)"
                     >
                         {" "}
@@ -163,7 +163,7 @@ class Pickle extends Component {
                         color="v_light_gray"
                         scroll={scroll}
                         active={3720}
-                        mobile_active={3470}
+                        mobile_active={2700}
                         mobile_transform="translateY(-40px)"
                     >
                         {" "}
