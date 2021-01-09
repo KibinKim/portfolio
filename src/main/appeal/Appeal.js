@@ -90,13 +90,13 @@ class Appeal extends Component {
                     </Row>
                     <Row desktop width="1px" height="410px" color="#8b8b8b" />
                     <Column mobile_width="100%" top="70px" mobile_top="30px" left="80px" mobile_left="0px">
-                        <ItemText>경험을 갖춘 웹 퍼블리셔가 필요할 때</ItemText>
+                        <ItemText>경험을 갖춘 웹 개발자가 필요할 때</ItemText>
                         <ItemText>
                             책임감 있고 함께 일할 때 시너지를 주는 팀원이 <MobileBr />
                             필요할 때
                         </ItemText>
                         <ItemText>열정이 있으며 성장하는 사람이 필요할 때</ItemText>
-                        <ItemText font_family="NotoSansCJKkr-Bold">좋아하는 일을 잘하는 사람이 필요할 때</ItemText>
+                        <ItemText font_family="NotoSansCJKkr-Bold">좋아하는 일을 열심히하는 사람이 필요할 때</ItemText>
                         <WorkButton
                             c
                             top="50px"

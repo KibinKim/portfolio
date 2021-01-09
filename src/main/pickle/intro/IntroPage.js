@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Column, Row, Text, Img, MobileBr } from "common/styleUtil";
+import { IntroContainer, IntroContents } from "main/pickle/styleUtil";
 import pickle_match from "assets/img/pickle_match.png";
 import pickle_myparty from "assets/img/pickle_myparty.png";
 import pickle_award from "assets/img/pickle_award.png";
@@ -8,6 +9,7 @@ export default class IntroPage extends Component {
     render() {
         return (
             <Column
+                id="frame"
                 padding_top="110px"
                 mobile_padding_top="30px"
                 padding_bottom="110px"
@@ -21,8 +23,8 @@ export default class IntroPage extends Component {
                 <Text size="20px" mobile_size="18px" mobile_height="1.65" font_family="NotoSansCJKkr-Bold">
                     작업물을 보시기 전에 <MobileBr /> 피클플러스에 대하여 <MobileBr /> 간단히 소개해드릴게요~ :)
                 </Text>
-                <Row width="100%" mobile_direction="column" top="100px" mobile_top="40px">
-                    <Column width="60%" mobile_width="100%" left="20px" mobile_left="0px">
+                <Row width="100%" top="100px" laptop_direction="column" laptop_top="40px">
+                    <Column width="60%" right="50px" laptop_width="100%" laptop_top="50px" laptop_right="0px">
                         <Text size="18px" mobile_size="16px" font_family="NotoSansCJKkr-Medium">
                             <Text display="contents" mobile_display="contents" size="20px" mobile_size="18px">
                                 ‧
@@ -31,7 +33,7 @@ export default class IntroPage extends Component {
                         </Text>
                         <br />
                         <Text width="100%" size="18px" mobile_size="14px" height="30px" mobile_height="25px">
-                            피클은{" "}
+                            피클플러스는{" "}
                             <span
                                 style={{
                                     fontFamily: "NotoSansCJKkr-Bold",
@@ -123,10 +125,10 @@ export default class IntroPage extends Component {
                     </Column>
                     <Column
                         width="40%"
-                        mobile_width="100%"
-                        mobile_top="50px"
                         align_items="center"
                         justify_content="center"
+                        laptop_width="100%"
+                        laptop_top="50px"
                     >
                         <Img
                             src={pickle_myparty}

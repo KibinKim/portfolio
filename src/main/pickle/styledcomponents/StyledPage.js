@@ -64,26 +64,38 @@ export default class StyledPage extends Component {
                     모든 페이지에 적용되는 <MobileBr />
                     GlobalStyle을 선언합니다
                 </Text>
-                <Row top="30px" mobile_top="15px" align_items="center" justify_content="space-between">
-                    <Row desktop>
-                        <CodeImg width="290px" height="190px" src={pickle_provider} />
-                        <CodeImg width="400px" height="255px" left="8px" src={pickle_globalstyle} />
+                <Row
+                    laptop_direction="column"
+                    top="30px"
+                    mobile_top="15px"
+                    align_items="center"
+                    justify_content="space-between"
+                >
+                    <Row desktop width="100%">
+                        <Row max_width="fit-content" width="100%" height="fit-content">
+                            <CodeImg max_width="290px" width="100%" height="auto" src={pickle_provider} />
+                        </Row>
+                        <Row max_width="fit-content" width="100%" height="fit-content" left="8px">
+                            <CodeImg max_width="400px" width="100%" height="auto" src={pickle_globalstyle} />
+                        </Row>
                     </Row>
                     <Text
+                        width="100%"
                         left="30px"
-                        mobile_left="0px"
+                        laptop_left="0px"
+                        laptop_top="30px"
                         size="14px"
                         mobile_size="12px"
                         height="24px"
                         mobile_height="22px"
                         color="dark_gray"
                         text_align="center"
-                        mobile_text_align="left"
+                        laptop_text_align="left"
                         font_family="NotoSansCJKkr-Light"
                     >
                         팀원과의 협업 과정에서 스타일의 일관성이 떨어지는 것을 방지하고 규격을 정함으로써 스타일 작업에
                         대한 시간을 단축시키기 위해 Theme Style을 구축하였습니다. ThemeProvider와 GlobalStyle을 사용하여{" "}
-                        <DesktopBr /> 피클플러스 모든 페이지에 공통으로 사용되는 스타일을 적용하였습니다.
+                        피클플러스 모든 페이지에 공통으로 사용되는 스타일을 적용하였습니다.
                     </Text>
                 </Row>
                 <Text
@@ -96,23 +108,42 @@ export default class StyledPage extends Component {
                 >
                     style의 재사용성을 높힙니다
                 </Text>
-                <Row top="30px" mobile_top="15px" align_items="center" justify_content="space-between">
+                <Row
+                    laptop_direction="column"
+                    top="30px"
+                    mobile_top="15px"
+                    align_items="center"
+                    justify_content="space-between"
+                >
                     <Text
+                        laptop_order="2"
+                        laptop_top="30px"
                         size="14px"
                         mobile_size="12px"
                         height="24px"
                         mobile_height="22px"
                         color="dark_gray"
                         text_align="center"
-                        mobile_text_align="right"
+                        laptop_text_align="right"
                         font_family="NotoSansCJKkr-Light"
                     >
                         공통적으로 사용하는 스타일 컴포넌트를 선언 후 특정 페이지에서 활용해야 할 때 확장시켜 사용하면
                         중복되는 스타일을 줄일 수 있습니다. 또, props를 사용하여 특정 스타일 변경이 쉽게 가능합니다.
                     </Text>
-                    <Row desktop left="30px">
-                        <CodeImg width="450px" height="255px" src={pickle_column} />
-                        <CodeImg width="280px" height="190px" left="8px" src={pickle_reuse} />
+                    <Row
+                        desktop
+                        width="100%"
+                        left="30px"
+                        laptop_justify_content="flex-end"
+                        laptop_left="0px"
+                        laptop_order="1"
+                    >
+                        <Row max_width="fit-content" width="100%" height="fit-content">
+                            <CodeImg max_width="450px" width="100%" height="auto" src={pickle_column} />
+                        </Row>
+                        <Row max_width="fit-content" width="100%" height="fit-content">
+                            <CodeImg max_width="280px" width="100%" height="auto" left="8px" src={pickle_reuse} />
+                        </Row>
                     </Row>
                 </Row>
                 <Column

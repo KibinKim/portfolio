@@ -6,6 +6,7 @@ import { HeartAnim, FadeIn, SlideInTop, ModalOpen } from "anim/styleUtil";
 //media query를 통한 자동 리사이징
 export const sizes = {
     wide: "1400px",
+    laptop: "1220px",
     desktop: "992px",
     tablet: "768px",
     phone: "663px",
@@ -32,36 +33,43 @@ export const GlobalStyles = createGlobalStyle`
   }
   @font-face {
     font-family: "NotoSansCJKkr";
+    font-display: fallback;
     src: local("NotoSansCJKkr"),
       url(${require("assets/fonts/NotoSansKR-Regular.otf")});
   }
   @font-face {
     font-family: "NotoSansCJKkr-Regular";
+    font-display: fallback;
     src: local("NotoSansCJKkr-Regular"),
       url(${require("assets/fonts/NotoSansKR-Regular.otf")});
   }
   @font-face {
     font-family: "NotoSansCJKkr-Light";
+    font-display: fallback;
     src: local("NotoSansCJKkr-Light"),
       url(${require("assets/fonts/NotoSansKR-Light.otf")});
   }
   @font-face {
     font-family: "NotoSansCJKkr-Thin";
+    font-display: fallback;
     src: local("NotoSansKR-Thin"),
       url(${require("assets/fonts/NotoSansKR-Thin.otf")});
   }
   @font-face {
     font-family: "NotoSansCJKkr-Medium";
+    font-display: fallback;
     src: local("NotoSansKR-Medium"),
       url(${require("assets/fonts/NotoSansKR-Medium.otf")});
   }
   @font-face {
     font-family: "NotoSansCJKkr-Bold";
+    font-display: fallback;
     src: local("NotoSansKR-Bold"),
       url(${require("assets/fonts/NotoSansKR-Bold.otf")});
   }
   @font-face {
     font-family: "NotoSansCJKkr-Black";
+    font-display: fallback;
     src: local("NotoSansKR-Black"),
       url(${require("assets/fonts/NotoSansKR-Black.otf")});
   }
@@ -217,6 +225,7 @@ export const Row = styled.div`
     min-width: ${(props) => props.min_width};
     width: ${(props) => props.width || ""};
     height: ${(props) => props.height || ""};
+    max-height: ${(props) => props.max_height};
     justify-content: ${(props) => props.justify_content || ""};
     align-items: ${(props) => props.align_items || ""};
     align-self: ${(props) => props.align_self || ""};
@@ -239,6 +248,18 @@ export const Row = styled.div`
         cursor: ${(props) => props.cursor || ""};
         background-color: ${(props) => props.hover_color || ""};
     }
+    ${media.laptop`
+        flex-direction: ${(props) => props.laptop_direction};
+        width: ${(props) => props.laptop_width};
+        align-items: ${(props) => props.laptop_align_items};
+        justify-content: ${(props) => props.laptop_justify_content};
+        margin-top: ${(props) => props.laptop_top};
+        margin-bottom: ${(props) => props.laptop_bottom};
+        margin-right: ${(props) => props.laptop_right};
+        margin-left: ${(props) => props.laptop_left};
+        padding-left: ${(props) => props.laptop_padding_left};
+        order: ${(props) => props.laptop_order};
+    `}
     ${media.phone`
         display: ${(props) => (props.desktop ? "none" : "flex")};
         margin-top: ${(props) => props.mobile_top};
@@ -286,6 +307,7 @@ export const Column = styled.div`
     min-height: ${(props) => props.min_height};
     width: ${(props) => props.width || ""};
     height: ${(props) => props.height || ""};
+    max-height: ${(props) => props.max_height};
     justify-content: ${(props) => props.justify_content || ""};
     justify-self: ${(props) => props.justify_self || ""};
     align-items: ${(props) => props.align_items || ""};
@@ -306,6 +328,18 @@ export const Column = styled.div`
         cursor: ${(props) => props.cursor || ""};
         background-color: ${(props) => props.hover_color || ""};
     }
+    ${media.laptop`
+        flex-direction: ${(props) => props.laptop_direction};
+        width: ${(props) => props.laptop_width};
+        align-items: ${(props) => props.laptop_align_items};
+        justify-content: ${(props) => props.laptop_justify_content};
+        margin-top: ${(props) => props.laptop_top};
+        margin-bottom: ${(props) => props.laptop_bottom};
+        margin-right: ${(props) => props.laptop_right};
+        margin-left: ${(props) => props.laptop_left};
+        padding-left: ${(props) => props.laptop_padding_left};
+        order: ${(props) => props.laptop_order};
+    `}
     ${media.phone`
         display: ${(props) => (props.desktop ? "none" : "flex")};
         margin-top: ${(props) => props.mobile_top};
@@ -442,6 +476,14 @@ export const Text = styled.div`
         color: ${(props) => props.hover_color || ""};
         font-size: ${(props) => props.hover_size};
     }
+    ${media.laptop`
+        order: ${(props) => props.laptop_order};
+        margin-top: ${(props) => props.laptop_top};
+        margin-bottom: ${(props) => props.laptop_bottom};
+        margin-right: ${(props) => props.laptop_right};
+        margin-left: ${(props) => props.laptop_left};
+        text-align: ${(props) => props.laptop_text_align};
+    `}
     ${media.phone`
         display: ${(props) => props.mobile_display || "block"};
         width: ${(props) => props.mobile_width};
@@ -479,6 +521,8 @@ export const Circle = styled(Row)`
 export const Img = styled.img`
     display: ${(props) => (props.mobile ? "none" : "block")};
     width: ${(props) => props.width || ""};
+    max-width: ${(props) => props.max_width || ""};
+    min-width: ${(props) => props.min_width || ""};
     height: ${(props) => props.height || ""};
     margin-top: ${(props) => props.top || ""};
     margin-left: ${(props) => props.left || ""};

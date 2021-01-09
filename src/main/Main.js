@@ -6,7 +6,7 @@ import Pickle from "main/pickle/Pickle";
 import Others from "main/others/Others";
 import OtherWorks from "main/otherworks/OtherWorks";
 import Appeal from "main/appeal/Appeal";
-import { Container, Column, Text } from "common/styleUtil";
+import { Container, Column, Row, Text } from "common/styleUtil";
 import { Page_1, Page_2, SlideInText, BounceText, Email } from "./styleUtil";
 import { connect } from "react-redux";
 import { device_check } from "common/config";
@@ -15,9 +15,14 @@ class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            env: "",
+            env: null,
         };
     }
+
+    componentWillMount = () => {
+        this.setState({ env: "" });
+    };
+
     handleScroll = (e) => {
         const { scroll } = this.props;
         const { env } = this.state;

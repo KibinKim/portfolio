@@ -10,6 +10,7 @@ import {
     CloseButton,
     LottieResponsive,
 } from "common/styleUtil";
+import { Logo } from "main/pickle/styleUtil";
 import MobilePage from "main/pickle/mobile/MobilePage";
 import IntroPage from "main/pickle/intro/IntroPage";
 import MainSkillPage from "main/pickle/mainskill/MainSkillPage";
@@ -63,7 +64,7 @@ class Pickle extends Component {
                             <ScrollColumn id="contents" onScroll={this.handleScroll}>
                                 <Img src={pickle_landing} width="100%" height="auto" />
                                 <Column
-                                    padding_bottom="110px"
+                                    padding_bottom="70px"
                                     mobile_padding_bottom="50px"
                                     padding_left="110px"
                                     mobile_padding_left="0px"
@@ -77,6 +78,7 @@ class Pickle extends Component {
                                         mobile_top="30px"
                                         height="auto"
                                     />
+                                    {/* <Logo /> */}
                                     <Text
                                         top="40px"
                                         mobile_top="30px"
@@ -190,7 +192,7 @@ class Pickle extends Component {
                             mobile_size="40px"
                             font_family="NotoSansCJKkr-Bold"
                         >
-                            Pickle
+                            Pickle +
                         </Text>
                     </Column>
                     <WorkButton

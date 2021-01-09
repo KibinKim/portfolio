@@ -8,6 +8,7 @@ export const TypingText = styled(Text)`
     color: transparent;
     display: ${(props) => props.display};
     animation: ${Cursor2} 0.6s infinite;
+    text-shadow: #e6e6e6 1px 5px 10px;
     -webkit-text-stroke: 1px #1a1a1a;
     -webkit-font-smoothing: antialiased;
     transition: all 0.8s;

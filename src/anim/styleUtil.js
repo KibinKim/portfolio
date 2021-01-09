@@ -201,3 +201,9 @@ export const Cursor2 = keyframes`
     border-right: 1px solid #fff
   }
 `;
+
+export const RotateAnim = keyframes`
+  100% {
+      transform: rotate(360deg);
+  }
+`;

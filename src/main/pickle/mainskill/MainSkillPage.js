@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Column, Row, Text, MobileBr } from "common/styleUtil";
-import { SkillCircle } from "main/pickle/styleUtil";
+import { SkillCircle, MainContainer, MainContents } from "main/pickle/styleUtil";
 
 export default class MainSkill extends Component {
     render() {
@@ -21,12 +21,12 @@ export default class MainSkill extends Component {
                 </Text>
                 <Row
                     width="100%"
-                    mobile_direction="column"
-                    top="100px"
+                    laptop_direction="column"
+                    top="60px"
                     mobile_top="40px"
                     justify_content="space-between"
                 >
-                    <Row width="50%" mobile_width="100%" align_items="center" justify_content="center">
+                    <Column align_items="center" justify_content="center" width="50%" laptop_width="100%">
                         <Column
                             align_items="center"
                             justify_content="center"
@@ -65,15 +65,15 @@ export default class MainSkill extends Component {
                                 </SkillCircle>
                             </Row>
                         </Column>
-                    </Row>
+                    </Column>
                     <Column
-                        width="50%"
-                        mobile_width="100%"
-                        mobile_top="30px"
                         align_items="flex-start"
                         justify_content="center"
-                        padding_left="70px"
-                        mobile_padding_left="0px"
+                        width="50%"
+                        laptop_width="100%"
+                        laptop_top="30px"
+                        padding_left="30px"
+                        laptop_padding_left="0px"
                     >
                         <Text size="18px" mobile_size="16px" font_family="NotoSansCJKkr-Medium">
                             Why?
