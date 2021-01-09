@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css, keyframes } from "styled-components";
 import { Column, Row, Circle, Text, Img, media } from "common/styleUtil";
-import { HeartAnim, TypingAnim, TypingAnim2, cursor, BounceAnim2, RotateAnim } from "anim/styleUtil";
+import { HeartAnim, TypingAnim, TypingAnim2, cursor, BounceAnim2 } from "anim/styleUtil";
 import pickle_mobile_mockup from "assets/img/pickle_mobile_mockup.svg";
 
 /* 로고 */
@@ -87,10 +87,6 @@ export const Logo = (props) => {
         </Svg>
     );
 };
-
-export const Path = styled.path`
-    animation: ${RotateAnim} 1s linear infinite;
-`;
 
 export const SkillCircle = styled(Circle)`
     max-width: 120px;
