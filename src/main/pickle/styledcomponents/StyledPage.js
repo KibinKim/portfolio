@@ -31,10 +31,13 @@ export default class StyledPage extends Component {
     componentWillReceiveProps() {
         const { scroll } = this.props;
         const { env } = this.state;
-        console.log(scroll);
+        console.log(scroll, window.innerWidth);
         const move_screen = document.getElementById("move_screen");
-        if (env == "PC") move_screen.style.transform = `translateX(-${scroll - 4900}px)`;
-        else if (env == "MOBILE") move_screen.style.transform = `translateX(-${scroll - 3450}px)`;
+        if (env == "PC") {
+            window.innerWidth > 1220
+                ? (move_screen.style.transform = `translateX(-${scroll - 4520}px)`)
+                : (move_screen.style.transform = `translateX(-${scroll - 6300}px)`);
+        } else if (env == "MOBILE") move_screen.style.transform = `translateX(-${scroll - 3450}px)`;
     }
     render() {
         return (
@@ -160,15 +163,41 @@ export default class StyledPage extends Component {
                 >
                     <BorderText id="move_screen">역동적인 화면을 만들어냅니다</BorderText>
                 </Column>
-                <Row top="30px" mobile_top="20px" align_items="center" justify_content="space-between">
-                    <Row desktop align_items="flex-end">
-                        <BounceCodeImg width="230px" height="350px" src={pickle_keyframes} />
-                        <Column left="8px" align_items="center">
+                <Row
+                    laptop_direction="column"
+                    top="30px"
+                    mobile_top="20px"
+                    align_items="center"
+                    justify_content="space-between"
+                >
+                    <Row desktop width="100%" align_items="flex-end" laptop_justify_content="center">
+                        <Row max_width="fit-content" width="100%" height="fit-content">
+                            <BounceCodeImg
+                                max_width="230px"
+                                min_width="165px"
+                                width="100%"
+                                height="auto"
+                                src={pickle_keyframes}
+                            />
+                        </Row>
+                        <Column
+                            left="8px"
+                            width="100%"
+                            max_width="fit-content"
+                            height="fit-content"
+                            align_items="center"
+                        >
                             <ShadowText> 코드 위에 커서를 올려보세요👏🏼</ShadowText>
-                            <HeartCodeImg width="395px" height="240px" src={pickle_transform} />
+                            <HeartCodeImg
+                                max_width="395px"
+                                min_width="300px"
+                                width="100%"
+                                height="auto"
+                                src={pickle_transform}
+                            />
                         </Column>
                     </Row>
-                    <Column desktop width="40%" align_items="center">
+                    <Column desktop width="100%" laptop_width="unset" align_items="flex-start" laptop_top="30px">
                         <TypingText>keyframes, animation, transition등과 같은 애니메이션 관련 프로퍼티를</TypingText>
                         <TypingText>적극 활용하여 사용자 경험을 높이려했으며 즐거운 시각적 효과를 제공하여</TypingText>
                         <TypingText2>이목을 집중시키려했습니다. </TypingText2>

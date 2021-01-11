@@ -170,6 +170,9 @@ export const ShadowText = styled(Text)`
         text-shadow: #f7819f 1px 0 20px;
         transition: 0.3s all ease-in;
     }
+    ${media.laptop`
+        display: none;
+    `}
 `;
 
 export const BorderText = styled(Text)`

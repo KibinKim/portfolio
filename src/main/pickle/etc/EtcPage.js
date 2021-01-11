@@ -51,31 +51,39 @@ export default class EtcPage extends Component {
                     size="16px"
                     mobile_size="14px"
                     color="dark_gray"
-                    mobile_align_self="flex-end"
+                    laptop_align_self="flex-end"
                 >
                     백엔드와 REST하게 통신합니다
                 </Text>
                 <Row
+                    laptop_direction="column"
                     top="30px"
                     mobile_top="15px"
                     align_items="center"
-                    mobile_align_items="flex-end"
+                    laptop_align_items="flex-end"
                     justify_content="space-between"
                 >
-                    <Row desktop>
-                        <CodeImg width="350px" height="270px" src={pickle_axios} />
-                        <CodeImg left="8px" width="360px" height="330px" src={pickle_communication} />
+                    <Row desktop width="100%" laptop_justify_content="flex-end">
+                        <Row max_width="fit-content" width="100%" height="fit-content">
+                            <CodeImg max_width="350px" width="100%" height="auto" src={pickle_axios} />
+                        </Row>
+
+                        <Row max_width="fit-content" width="100%" height="fit-content" left="8px">
+                            <CodeImg max_width="360px" width="100%" height="auto" src={pickle_communication} />
+                        </Row>
                     </Row>
                     <Text
+                        width="100%"
                         left="30px"
-                        mobile_left="0px"
+                        laptop_left="0px"
+                        laptop_top="30px"
                         size="14px"
                         mobile_size="12px"
                         height="24px"
                         mobile_height="22px"
                         color="dark_gray"
                         text_align="center"
-                        mobile_text_align="right"
+                        laptop_text_align="right"
                         font_family="NotoSansCJKkr-Light"
                     >
                         피클플러스는 서버와 데이터를 주고 받아야하는 페이지가 많았기 때문에 <DesktopBr /> 클라이언트와
@@ -93,25 +101,29 @@ export default class EtcPage extends Component {
                     mobile_size="14px"
                     color="dark_gray"
                     align_self="flex-end"
-                    mobile_align_self="flex-start"
+                    laptop_align_self="flex-start"
                 >
                     실시간으로 데이터를 주고 받습니다
                 </Text>
                 <Row
+                    laptop_direction="column"
                     top="30px"
                     mobile_top="15px"
                     align_items="center"
-                    mobile_align_items="flex-start"
+                    laptop_align_items="flex-start"
                     justify_content="space-between"
                 >
                     <Text
+                        width="100%"
+                        laptop_order="2"
+                        laptop_top="30px"
                         size="14px"
                         mobile_size="12px"
                         height="24px"
                         mobile_height="22px"
                         color="dark_gray"
                         text_align="center"
-                        mobile_text_align="left"
+                        laptop_text_align="left"
                         font_family="NotoSansCJKkr-Light"
                     >
                         web socket으로 백 엔드에서 실시간으로 데이터를 받아와 <DesktopBr />
@@ -121,22 +133,36 @@ export default class EtcPage extends Component {
                         피클플러스에서 핵심 기능인 실시간 자동 매칭에서 사용되며,
                         <DesktopBr /> 페이지에서 이탈하더라도 뒷 단에서 기능을 동작시키기 위하여 구현시켰습니다.
                     </Text>
-                    <Column desktop left="30px" align_items="center">
-                        <CodeImg width="500px" height="180px" src={pickle_authconnect} />
-                        <Row top="8px">
-                            <CodeImg width="460px" height="370px" src={pickle_opensocket} />
-                            <Img
-                                left="8px"
-                                width="270px"
-                                height="260px"
-                                border_radius="13px"
-                                box_shadow="0 5px 32px 0 rgba(15, 15, 15, 0.15)"
-                                src={pickle_kakaoalarm}
-                            />
+                    <Column
+                        desktop
+                        width="100%"
+                        left="30px"
+                        laptop_left="0px"
+                        align_items="center"
+                        laptop_align_items="flex-start"
+                        laptop_order="1"
+                    >
+                        <Row max_width="fit-content" width="100%" height="fit-content">
+                            <CodeImg max_width="500px" width="100%" height="auto" src={pickle_authconnect} />
+                        </Row>
+                        <Row top="8px" width="100%">
+                            <Row max_width="fit-content" width="100%" height="fit-content">
+                                <CodeImg max_width="460px" width="100%" height="auto" src={pickle_opensocket} />
+                            </Row>
+                            <Row max_width="fit-content" width="100%" height="fit-content" left="8px">
+                                <Img
+                                    max_width="270px"
+                                    width="100%"
+                                    height="auto"
+                                    border_radius="13px"
+                                    box_shadow="0 5px 32px 0 rgba(15, 15, 15, 0.15)"
+                                    src={pickle_kakaoalarm}
+                                />
+                            </Row>
                         </Row>
                     </Column>
                 </Row>
-                <Column desktop align_items="center" top="120px" height="1050px">
+                <Column desktop align_items="center" top="120px" height="1060px">
                     <Text
                         size="18px"
                         color="dark_gray"
@@ -147,7 +173,7 @@ export default class EtcPage extends Component {
                         피클플러스에서 웹 개발을 진행하면서 익혔던 <br />
                         layout, 모달, Router, Svg 등 개인 기록을 남기고 있어요✍🏼
                     </Text>
-                    <Column width="100%" height="530px" position="relative">
+                    <Column width="100%" height="520px" position="relative" laptop_transform="scale(0.7)">
                         <CodeImg
                             position="absolute"
                             width="350px"
@@ -194,7 +220,7 @@ export default class EtcPage extends Component {
                             border="solid 1px #000"
                             font_color="#000"
                             color="#000"
-                            style={{ transform: "translate(-50%, -50%)", top: "175%", left: "50%" }}
+                            style={{ transform: "translate(-50%, -50%)", top: "185%", left: "50%" }}
                             onClick={() => window.open("https://www.notion.so/25e108e015444345b07c7e0f809a7e02")}
                         >
                             기록 보기

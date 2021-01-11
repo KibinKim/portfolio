@@ -257,7 +257,10 @@ export const Row = styled.div`
         margin-bottom: ${(props) => props.laptop_bottom};
         margin-right: ${(props) => props.laptop_right};
         margin-left: ${(props) => props.laptop_left};
+        padding-top: ${(props) => props.laptop_padding_top};
+        padding-bottom: ${(props) => props.laptop_padding_bottom};
         padding-left: ${(props) => props.laptop_padding_left};
+        transform: ${(props) => props.laptop_transform};
         order: ${(props) => props.laptop_order};
     `}
     ${media.phone`
@@ -337,7 +340,10 @@ export const Column = styled.div`
         margin-bottom: ${(props) => props.laptop_bottom};
         margin-right: ${(props) => props.laptop_right};
         margin-left: ${(props) => props.laptop_left};
+        padding-top: ${(props) => props.laptop_padding_top};
+        padding-bottom: ${(props) => props.laptop_padding_bottom};
         padding-left: ${(props) => props.laptop_padding_left};
+        transform: ${(props) => props.laptop_transform};
         order: ${(props) => props.laptop_order};
     `}
     ${media.phone`
@@ -478,11 +484,14 @@ export const Text = styled.div`
     }
     ${media.laptop`
         order: ${(props) => props.laptop_order};
+        font-size: ${(props) => props.laptop_size};
+        line-height: ${(props) => props.laptop_height};
         margin-top: ${(props) => props.laptop_top};
         margin-bottom: ${(props) => props.laptop_bottom};
         margin-right: ${(props) => props.laptop_right};
         margin-left: ${(props) => props.laptop_left};
         text-align: ${(props) => props.laptop_text_align};
+        align-self: ${(props) => props.laptop_align_self};
     `}
     ${media.phone`
         display: ${(props) => props.mobile_display || "block"};
@@ -602,6 +611,9 @@ export const Input = styled.input`
 //desktop에서만
 export const DesktopBr = styled.br`
     display: block;
+    ${media.laptop`
+        display: none;
+    `}
     ${media.phone`
         display: none;
     `}
@@ -615,27 +627,15 @@ export const MobileBr = styled.br`
 `;
 
 export const LottieResponsive = (props) => {
-    let {
-        flex_direction,
-        width,
-        height,
-        mobile_width,
-        mobile_height,
-        mobile_ab_top,
-        mobile_ab_left,
-        style,
-        ...tmp_props
-    } = props;
+    let { flex_direction, position, width, height, mobile_height, mobile_ab_top, style, ...tmp_props } = props;
     return (
         <Container
             flex_direction={props.flex_direction}
+            position={props.position}
             width={props.width}
             height={props.height}
-            mobile_width={props.mobile_width}
             mobile_height={props.mobile_height}
-            mobile_position={props.mobile_position}
             mobile_ab_top={props.mobile_ab_top}
-            mobile_ab_left={props.mobile_ab_left}
             style={props.style}
         >
             <Lottie width="100%" height="100%" {...tmp_props} />

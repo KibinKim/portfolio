@@ -86,7 +86,7 @@ class Pickle extends Component {
                                         mobile_size="14px"
                                         font_family="NotoSansCJKkr-Medium"
                                     >
-                                        Web Development 100%
+                                        Web Development 80%
                                     </Text>
                                     <Text
                                         top="10px"

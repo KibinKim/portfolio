@@ -116,7 +116,7 @@ export default class IntroPage extends Component {
                                 2020년
                             </Text>
                             <Text size="16px" mobile_size="12px" top="10px" height="30px" mobile_height="25px">
-                                - 성균관대학교 하반기 창업경진대회 수상
+                                - 성균관대학교 하반기 창업경진대회 최우수상
                                 <br />
                                 - 창업진흥원 예비창업패키지 일반분야 선정
                                 <br />- 프라이머(국내 최고 초기투자사) SEED 투자유치
