@@ -965,10 +965,9 @@ export const ScrollColumn = styled(Column)`
     overflow-x: hidden;
     max-width: 1560px;
     width: 100%;
-    height: 730px;
+    height: 100%;
     margin-top: 20px;
     ${media.phone`
-        height: 600px;
         margin-top: 10px;
     `};
 `;

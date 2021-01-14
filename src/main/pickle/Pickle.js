@@ -46,6 +46,7 @@ class Pickle extends Component {
                     open={modal_open}
                     children={
                         <Container
+                            height="-webkit-fill-available"
                             padding_top="30px"
                             mobile_padding_top="10px"
                             padding_bottom="30px"
@@ -129,6 +130,7 @@ class Pickle extends Component {
                         this.setState({ modal_open: false });
                     }}
                     width="calc(100vw - 40px)"
+                    height="calc(100vh - 80px)"
                     max_width="1620px"
                     border_radius="6px"
                 />

@@ -43,10 +43,10 @@ export default class MyWork extends Component {
                             <WorkMenu>
                                 Web Development
                                 <WorkText>
-                                    React를 사용한 웹 개발을 이해하며 잘 다룹니다. <MobileBr /> 데이터를 받아와 어떻게
-                                    효율적으로 뿌려줄지
-                                    <br /> 관심이 많으며 유지보수를 고려한 코드 작성, 데이터 <MobileBr /> 관리 등 탄탄한
-                                    업무 프로세스를 지향합니다.
+                                    React를 사용한 웹 개발을 이해하며 깨끗한 코드를 작성하기 위해 공부합니다. <br />
+                                    데이터를 받아와 어떻게 효율적으로 뿌려줄지 관심이 많으며 유지보수를 고려한 코드
+                                    작성, <DesktopBr />
+                                    데이터 <MobileBr /> 관리 등 탄탄한 업무 프로세스를 지향합니다.
                                 </WorkText>
                             </WorkMenu>
                         </Row>
