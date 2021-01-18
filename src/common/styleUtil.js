@@ -968,7 +968,6 @@ export const ScrollColumn = styled(Column)`
     height: 730px;
     margin-top: 20px;
     ${media.phone`
-        height: 600px;
         margin-top: 10px;
     `};
 `;
