@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Column, Row, Text, Img, SideText, DesktopBr, MobileBr } from "common/styleUtil";
 import { MyContainer } from "main/my/styleUtil";
 import { connect } from "react-redux";
-import profile from "assets/img/profile.png";
+import profile from "assets/img/kibin.png";
 import js from "assets/img/js.png";
 import react from "assets/img/react.png";
 import styled_components from "assets/img/styledcomponents.png";
