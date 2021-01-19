@@ -32,7 +32,7 @@ export default class MyWork extends Component {
                         <Heading>잘하는 일을</Heading>
                         <Row align_items="center">
                             <Heading>소개합니다 </Heading>
-                            <ShakeText left="7px" height="1.7" size="40px" mobile_size="18px">
+                            <ShakeText left="7px" height="1.7" size="40px" mobile_size="26px">
                                 👋🏼
                             </ShakeText>
                         </Row>
