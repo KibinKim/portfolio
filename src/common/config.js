@@ -1,5 +1,5 @@
 import Store from "redux/Store";
-//
+////
 export const store = Store();
 
 export function device_check() {
@@ -19,4 +19,4 @@ export function device_check() {
 }
 
 export const URL_FRONT = process.env.REACT_APP_URL_FRONT; //수정금지
-export const URL = "devbean.kr";
+export const URL = process.env.REACT_APP_URL;
