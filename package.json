@@ -9,6 +9,7 @@
         "@types/react-lottie": "^1.2.5",
         "emailjs-com": "^2.6.4",
         "immutable": "^4.0.0-rc.12",
+        "nginx": "^0.0.0",
         "react": "^16.14.0",
         "react-dom": "^16.14.0",
         "react-lottie": "^1.2.3",
