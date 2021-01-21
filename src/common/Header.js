@@ -80,7 +80,7 @@ class Header extends Component {
                     color={scroll_top > 2250 ? "#000" : "v_light_gray"}
                     mobile_color={scroll_top > 1140 ? "#000" : "v_light_gray"}
                     scroll_top={scroll_top}
-                    onClick={() => window.open(`${URL_FRONT}/contact`)}
+                    onClick={() => window.open(`${window.location.href}contact`)}
                 >
                     kibin3846@gmail.com
                 </HeaderMail>

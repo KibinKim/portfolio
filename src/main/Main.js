@@ -95,7 +95,7 @@ class Main extends Component {
                         📮&nbsp;&nbsp; 함께 나누고 싶은 얘기가 있으시다면
                     </Text>
                     <Column align_items="center">
-                        <Email id="email" onClick={() => window.open(`${URL_FRONT}/contact`)}>
+                        <Email id="email" onClick={() => window.open(`${window.location.href}contact`)}>
                             kibin3846@gmail.com
                         </Email>
                         <BounceText
