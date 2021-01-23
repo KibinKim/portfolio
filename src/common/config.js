@@ -1,5 +1,5 @@
 import Store from "redux/Store";
-////
+//
 export const store = Store();
 
 export function device_check() {
