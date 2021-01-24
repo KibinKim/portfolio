@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { URL_FRONT } from "common/config";
+import Loading from "loading/Loading";
 import My from "main/my/My";
 import MyWork from "main/my/MyWork";
 import Pickle from "main/pickle/Pickle";
 import Others from "main/others/Others";
 import OtherWorks from "main/otherworks/OtherWorks";
 import Appeal from "main/appeal/Appeal";
-import { Container, Column, Row, Text } from "common/styleUtil";
-import { Page_1, Page_2, SlideInText, BounceText, Email } from "./styleUtil";
+import { Column, Text } from "common/styleUtil";
+import { MainContainer, Page_1, Page_2, SlideInText, BounceText, Email } from "./styleUtil";
 import { connect } from "react-redux";
 import { device_check } from "common/config";
 
@@ -16,6 +17,7 @@ class Main extends Component {
         super(props);
         this.state = {
             env: null,
+            loading: <Loading />,
         };
     }
 
@@ -49,14 +51,29 @@ class Main extends Component {
         window.addEventListener("scroll", this.handleScroll);
         const env = device_check();
         this.setState({ env });
+        const header = document.getElementById("header");
+        const footer = document.getElementById("footer");
+        if (header && footer) {
+            header.style.display = "none";
+            footer.style.display = "none";
+        }
+        setTimeout(() => {
+            this.setState({ loading: false });
+            header.style.display = "flex";
+            footer.style.display = "flex";
+        }, 1600);
     };
 
     render() {
-        return (
-            <Container overflow_x="hidden" onScroll={this.handleScroll}>
+        const { loading } = this.state;
+        return loading ? (
+            loading
+        ) : (
+            <MainContainer onScroll={this.handleScroll}>
                 <Page_1 id="page_1">
                     <SlideInText
                         id="first_title"
+                        position="relative"
                         size="90px"
                         second="3s"
                         text_align="center"
@@ -69,6 +86,7 @@ class Main extends Component {
                     </SlideInText>
                     <SlideInText
                         id="second_title"
+                        position="relative"
                         top="700px"
                         mobile_top="400px"
                         size="70px"
@@ -110,7 +128,7 @@ class Main extends Component {
                         </BounceText>
                     </Column>
                 </Page_2>
-            </Container>
+            </MainContainer>
         );
     }
 }

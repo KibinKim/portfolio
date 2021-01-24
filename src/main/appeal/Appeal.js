@@ -96,7 +96,7 @@ class Appeal extends Component {
                             필요할 때
                         </ItemText>
                         <ItemText>열정이 있으며 성장하는 사람이 필요할 때</ItemText>
-                        <ItemText font_family="NotoSansCJKkr-Bold">좋아하는 일을 열심히하는 사람이 필요할 때</ItemText>
+                        <ItemText font_family="NotoSansCJKkr-Bold">좋아하는 일을 열심히 하는 사람이 필요할 때</ItemText>
                         <WorkButton
                             c
                             top="50px"

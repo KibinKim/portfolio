@@ -44,7 +44,7 @@ export default class MyWork extends Component {
                                 Web Development
                                 <WorkText>
                                     React를 사용한 웹 개발을 이해하며 깨끗한 코드를 작성하기 위해 공부합니다. <br />
-                                    데이터를 받아와 어떻게 효율적으로 뿌려줄지 관심이 많으며 유지보수를 고려한 코드
+                                    데이터를 받아와 어떻게 효율적으로 뿌려줄지 관심이 많으며 유지/보수를 고려한 코드
                                     작성, <DesktopBr />
                                     데이터 <MobileBr /> 관리 등 탄탄한 업무 프로세스를 지향합니다.
                                 </WorkText>
@@ -68,7 +68,7 @@ export default class MyWork extends Component {
                             <WorkMenu>
                                 Co-work
                                 <WorkText>
-                                    빠르고 정확한 업무를 위해 팀원들과 끝 없이 소통합니다. 백엔드 개발자, 디자이너와
+                                    빠르고 정확한 업무를 위해 팀원들과 끝없이 소통합니다. 백엔드 개발자, 디자이너와
                                     가깝게 일하며 <DesktopBr /> Github, Figma등 협업 툴을 적극적으로 사용하여 원활한
                                     협업을 이끌어냅니다.
                                 </WorkText>

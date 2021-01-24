@@ -52,10 +52,10 @@ class My extends Component {
                             <Column mobile_align_items="center">
                                 <Img
                                     src={profile}
-                                    width="180px"
+                                    width="220px"
                                     mobile_width="120px"
-                                    height="237px"
-                                    mobile_height="160px"
+                                    height="240px"
+                                    mobile_height="140px"
                                     border_radius="30px"
                                     style={{ border: "2px #000000 solid" }}
                                     top="90px"
@@ -180,7 +180,7 @@ class My extends Component {
                                 Carrer
                             </Text>
                             <Text top="15px" mobile_top="10px" size="12px" height="19px">
-                                2019.11 ~ 2020.11 &nbsp; <MobileBr /> 피클플러스 웹 개발, <MobileBr />
+                                2019.11 ~ 2020.11 &nbsp; <br /> 피클플러스 웹 개발, <MobileBr />
                                 출시 및 서비스 유지/보수
                             </Text>
                             <Text

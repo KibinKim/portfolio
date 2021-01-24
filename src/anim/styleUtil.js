@@ -103,6 +103,30 @@ export const BounceAnim2 = keyframes`
     }
 `;
 
+export const LoadingBounce = keyframes`
+    0% { 
+        transform: translateY(0)
+    }
+    15%  { 
+        transform: translateY(-30px)
+    }
+    35%  { 
+        transform: translateY(0px)
+    }
+    50%  { 
+        transform: translateY(-15px)
+    }
+    60% { 
+        transform: translateY(0px)
+    }
+    70% { 
+        transform: translateY(-8px)
+    }
+    80% { 
+        transform: translateY(0px)
+    }
+`;
+
 export const HeartAnim = keyframes`
     0% {
         transform: scale(1);

@@ -33,7 +33,7 @@ class Header extends Component {
     render() {
         const { scroll_top } = this.state;
         return (
-            <HeaderContainer onScroll={this.handleScroll}>
+            <HeaderContainer id="header" onScroll={this.handleScroll}>
                 {scroll_top > 2250 ? (
                     <ChangedHeaderBox
                         desktop

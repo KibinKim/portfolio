@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Column, Row, Text, MobileBr } from "common/styleUtil";
-import { SkillCircle, MainContainer, MainContents } from "main/pickle/styleUtil";
+import { SkillCircle } from "main/pickle/styleUtil";
 
 export default class MainSkill extends Component {
     render() {

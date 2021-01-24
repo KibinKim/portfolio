@@ -4,7 +4,7 @@ import { FooterContainer, Row, Text, HeartText } from "common/styleUtil";
 export default class Footer extends Component {
     render() {
         return (
-            <FooterContainer>
+            <FooterContainer id="footer">
                 <Row>
                     <Text
                         size="15px"

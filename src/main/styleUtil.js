@@ -1,15 +1,17 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { Container, Row, Text, media } from "common/styleUtil";
-import { SlideIn, BounceAnim } from "anim/styleUtil";
-import backimg from "assets/img/bigsur.png";
+import { FadeIn, SlideIn, BounceAnim } from "anim/styleUtil";
+import backimg from "assets/img/wallpaper.png";
 
-export const PageContainer = styled(Container)`
-    overflow-y: scroll;
+export const MainContainer = styled(Container)`
+    overflow-x: hidden;
+    animation: ${FadeIn} 0.5s ease-in;
 `;
 
 export const Page_1 = styled.div`
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -23,6 +25,16 @@ export const Page_1 = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
     ${media.phone`
         height: 700px;
         padding-left: 30px;
