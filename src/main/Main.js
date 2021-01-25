@@ -66,7 +66,7 @@ class Main extends Component {
 
     render() {
         const { loading } = this.state;
-        return loading ? (
+        return loading && document.referrer != `${URL}/contact` ? (
             loading
         ) : (
             <MainContainer onScroll={this.handleScroll}>

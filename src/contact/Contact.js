@@ -43,7 +43,7 @@ export default class Contact extends Component {
                     <Text size="40px" mobile_size="23px" font_family="NotoSansCJKkr-Bold">
                         새 메일 🏷
                     </Text>
-                    <form className="contact-form" onSubmit={sendEmail}>
+                    <form style={{ height: "100%" }} className="contact-form" onSubmit={sendEmail}>
                         <Row top="50px" mobile_top="20px" align_items="center">
                             <Text size="20px" mobile_size="14px" font_family="NotoSansCJKkr-Medium">
                                 이름:{" "}

@@ -6,7 +6,7 @@ export const Message = styled.div`
     display: flex;
     flex-direction: column;
     width: 650px;
-    height: 800px;
+    height: 80vh;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
     background-color: #fff;
     padding-top: 35px;
@@ -27,13 +27,13 @@ export const Message = styled.div`
         padding-right: 15px;
         padding-bottom: 20px;
         width: 300px;
-        height: 600px;
+        height: 70vh;
     `};
 `;
 
 export const ContentsBox = styled(Column)`
     width: 98%;
-    height: 400px;
+    height: 45%;
     align-items: center;
     justify-content: center;
     padding-top: 5px;
@@ -51,7 +51,7 @@ export const ContentsBox = styled(Column)`
             border: solid 2px #4460aa;
         `};
     ${media.phone`
-    height: 350px;
+        height: 60%;
         margin-top: 5px;
         padding-right: 0px;
     `};
