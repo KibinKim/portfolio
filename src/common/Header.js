@@ -32,6 +32,7 @@ class Header extends Component {
 
     render() {
         const { scroll_top } = this.state;
+        const { history } = this.props;
         return (
             <HeaderContainer id="header" onScroll={this.handleScroll}>
                 {scroll_top > 2250 ? (
@@ -80,7 +81,7 @@ class Header extends Component {
                     color={scroll_top > 2250 ? "#000" : "v_light_gray"}
                     mobile_color={scroll_top > 1140 ? "#000" : "v_light_gray"}
                     scroll_top={scroll_top}
-                    onClick={() => window.open(`${URL}/contact`)}
+                    onClick={() => history.push("/contact")}
                 >
                     kibin3846@gmail.com
                 </HeaderMail>
