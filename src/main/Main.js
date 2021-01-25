@@ -37,9 +37,9 @@ class Main extends Component {
             if (env == "PC") {
                 if (scroll > 600 && scroll < 1000) {
                     second_title.style.transform = `scale(${scroll * 0.001})`;
-                    page_1.style.filter = ` blur(0px)`;
+                    page_1.style.opacity = `1`;
                 } else if (scroll > 1100) {
-                    page_1.style.filter = ` blur(${scroll * 0.0009}px)`;
+                    page_1.style.opacity = `${1 - scroll * 0.0001}`;
                 }
             } else if (env == "MOBILE") {
                 if (scroll > 220 && scroll < 550) second_title.style.transform = `scale(${scroll * 0.001})`;

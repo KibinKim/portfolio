@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Main from "main/Main";
 import Contact from "contact/Contact";
 import Header from "common/Header";
 import Footer from "common/Footer";
+import NotFound from "notfound/NotFound";
 
 export default class App extends Component {
     render() {
@@ -13,6 +14,8 @@ export default class App extends Component {
                 <Switch>
                     <Route exact path="/" component={Main} />
                     <Route path="/contact" component={Contact} />
+                    <Route path="/notfound" component={NotFound} />
+                    <Redirect to="/notfound" />
                 </Switch>
                 <Route exact path={["/"]} component={Footer} />
             </BrowserRouter>

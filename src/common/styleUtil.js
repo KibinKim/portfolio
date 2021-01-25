@@ -477,10 +477,12 @@ export const Text = styled.div`
     order: ${(props) => (props.order ? props.order : "")};
     transition: ${(props) => (props.transition ? props.transition : "color 0.15s ease-out")};
     position: ${(props) => props.position || ""};
+    text-shadow: ${(props) => props.text_shadow};
     &:hover {
         cursor: ${(props) => props.cursor || ""};
         color: ${(props) => props.hover_color || ""};
         font-size: ${(props) => props.hover_size};
+        text-shadow: ${(props) => props.hover_shadow};
     }
     ${media.laptop`
         order: ${(props) => props.laptop_order};

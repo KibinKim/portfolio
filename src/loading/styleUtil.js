@@ -8,6 +8,7 @@ export const LoadingBox = styled(Column)`
     padding-left: 30px;
     padding-right: 30px;
     border: solid 5px #000;
+    box-shadow: 0 5px 32px 0 rgba(15, 15, 15, 0.15);
     animation: ${LoadingBounce} 2s linear;
     ${media.phone`
         padding-top: 8px;

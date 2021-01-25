@@ -18,7 +18,12 @@ export default class Loading extends Component {
         return (
             <Container height="100vh" align_items="center" justify_content="center">
                 <LoadingBox>
-                    <Text size="80px" mobile_size="40px" font_family="NotoSansCJKkr-Bold">
+                    <Text
+                        size="80px"
+                        mobile_size="40px"
+                        text_shadow="2px 2px 4px gray"
+                        font_family="NotoSansCJKkr-Bold"
+                    >
                         DevBean
                     </Text>
                 </LoadingBox>
