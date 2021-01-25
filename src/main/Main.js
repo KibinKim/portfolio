@@ -66,7 +66,6 @@ class Main extends Component {
 
     render() {
         const { loading } = this.state;
-        const { history } = this.props;
         return loading ? (
             loading
         ) : (
@@ -115,7 +114,7 @@ class Main extends Component {
                         📮&nbsp;&nbsp; 함께 나누고 싶은 얘기가 있으시다면
                     </Text>
                     <Column align_items="center">
-                        <Email id="email" onClick={() => history.push("/contact")}>
+                        <Email id="email" onClick={() => window.open(`${URL}/contact`)}>
                             kibin3846@gmail.com
                         </Email>
                         <BounceText
