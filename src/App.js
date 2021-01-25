@@ -14,8 +14,8 @@ export default class App extends Component {
                 <Switch>
                     <Route exact path="/" component={Main} />
                     <Route path="/contact" component={Contact} />
-                    <Route path="/notfound" component={NotFound} />
-                    <Redirect to="/notfound" />
+                    <Route path="/404" component={NotFound} />
+                    <Redirect to="/404" />
                 </Switch>
                 <Route exact path={["/"]} component={Footer} />
             </BrowserRouter>

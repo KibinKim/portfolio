@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { URL_FRONT } from "common/config";
+import { URL_FRONT, URL } from "common/config";
 import Loading from "loading/Loading";
 import My from "main/my/My";
 import MyWork from "main/my/MyWork";
@@ -114,7 +114,7 @@ class Main extends Component {
                         📮&nbsp;&nbsp; 함께 나누고 싶은 얘기가 있으시다면
                     </Text>
                     <Column align_items="center">
-                        <Email id="email" onClick={() => window.open(`${window.location.href}contact`)}>
+                        <Email id="email" onClick={() => window.open(`${URL}/contact`)}>
                             kibin3846@gmail.com
                         </Email>
                         <BounceText
