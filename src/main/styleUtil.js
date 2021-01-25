@@ -124,10 +124,10 @@ export const SlideInText = styled(Text)`
     letter-spacing: 1px;
     animation: ${SlideIn} ${(props) => props.second} ease-in;
     ${media.tablet`
-        font-size: ${(props) => props.tablet_size || "40px"}; 
+        font-size: ${(props) => props.tablet_size || "60px"}; 
     `}
     ${media.phone`
-        font-size: ${(props) => props.mobile_size || "30px"}; 
+        font-size: ${(props) => props.mobile_size || "60px"}; 
     `}
 `;
 

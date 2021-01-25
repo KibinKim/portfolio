@@ -7,7 +7,7 @@ import Pickle from "main/pickle/Pickle";
 import Others from "main/others/Others";
 import OtherWorks from "main/otherworks/OtherWorks";
 import Appeal from "main/appeal/Appeal";
-import { Column, Text } from "common/styleUtil";
+import { Column, Text, MobileBr } from "common/styleUtil";
 import { MainContainer, Page_1, Page_2, SlideInText, BounceText, Email } from "./styleUtil";
 import { connect } from "react-redux";
 import { device_check } from "common/config";
@@ -36,13 +36,13 @@ class Main extends Component {
             first_title.style.transform = `scale(${1 - scroll * 0.001})`;
             if (env == "PC") {
                 if (scroll > 600 && scroll < 1000) {
-                    second_title.style.transform = `scale(${scroll * 0.001})`;
+                    second_title.style.transform = `scale(${scroll * 0.0008})`;
                     page_1.style.opacity = `1`;
                 } else if (scroll > 1100) {
                     page_1.style.opacity = `${1 - scroll * 0.0001}`;
                 }
             } else if (env == "MOBILE") {
-                if (scroll > 220 && scroll < 550) second_title.style.transform = `scale(${scroll * 0.001})`;
+                if (scroll > 220 && scroll < 550) second_title.style.transform = `scale(${scroll * 0.0008})`;
             }
         }
     };
@@ -79,7 +79,8 @@ class Main extends Component {
                         text_align="center"
                         font_family="NotoSansCJKkr-Bold"
                     >
-                        Make the Question.
+                        Make the <MobileBr />
+                        Question.
                         <Text top="50px" size="18px" mobile_size="16px" color="#fff">
                             Web Developer
                         </Text>
@@ -90,12 +91,12 @@ class Main extends Component {
                         top="700px"
                         mobile_top="400px"
                         size="70px"
-                        mobile_size="25px"
-                        tablet_size="35px"
+                        mobile_size="55px"
+                        tablet_size="55px"
                         color="#fff"
                         text_align="center"
                         height="150px"
-                        mobile_height="70px"
+                        mobile_height="100px"
                         font_family="NotoSansCJKkr-Medium"
                         style={{ transform: "scale(0)" }}
                     >
