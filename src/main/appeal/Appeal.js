@@ -45,7 +45,7 @@ class Appeal extends Component {
                     color="light_gray"
                     scroll={scroll}
                     active={5800}
-                    mobile_active={4400}
+                    mobile_active={4900}
                     onAnimationStart={() => (document.getElementById("typing").innerText = "")}
                     onAnimationEnd={typingStart}
                     mobile_transform="translate(-100px, 20px)"

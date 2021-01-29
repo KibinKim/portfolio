@@ -57,7 +57,7 @@ class Header extends Component {
                 {scroll_top > 130 ? (
                     <ChangedHeaderBox
                         mobile
-                        color={scroll_top > 1140 ? "#000" : "v_light_gray"}
+                        color={scroll_top > 1490 ? "#000" : "v_light_gray"}
                         font_family="NotoSansCJKkr-Light"
                         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                         scroll_top={scroll_top}
@@ -77,7 +77,7 @@ class Header extends Component {
                 )}
                 <HeaderMail
                     color={scroll_top > 2250 ? "#000" : "v_light_gray"}
-                    mobile_color={scroll_top > 1140 ? "#000" : "v_light_gray"}
+                    mobile_color={scroll_top > 1490 ? "#000" : "v_light_gray"}
                     scroll_top={scroll_top}
                     onClick={() => window.open(`${URL_FRONT}/contact`)}
                 >

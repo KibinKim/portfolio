@@ -39,10 +39,9 @@ export const Page_1 = styled.div`
         height: 700px;
         padding-left: 30px;
         padding-right: 30px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
+        &:before {
+            background: rgba(0, 0, 0, 0.8);
+        }
     `}
 `;
 

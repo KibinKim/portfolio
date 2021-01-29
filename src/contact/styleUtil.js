@@ -60,7 +60,7 @@ export const ContentsBox = styled(Column)`
 export const ContentsInput = styled.textarea`
     width: 98%;
     height: 100%;
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr-Light;
     font-size: 20px;
     border: none;
     outline: none;

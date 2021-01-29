@@ -327,6 +327,7 @@ export const Column = styled.div`
     z-index: ${(props) => props.z_index || ""};
     position: ${(props) => props.position || ""};
     transform: ${(props) => props.transform || ""};
+    overflow-y: ${(props) => props.overflow_y};
     &:hover {
         cursor: ${(props) => props.cursor || ""};
         background-color: ${(props) => props.hover_color || ""};
@@ -592,7 +593,7 @@ export const Input = styled.input`
         padding: 5px;
     }
     height: 40px;
-    font-family: NotoSansCJKkr;
+    font-family: NotoSansCJKkr-Light;
     font-size: 20px;
     border: none;
     outline: none;
@@ -660,6 +661,7 @@ export const HeaderContainer = styled.div`
 export const FooterContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #fff;
     padding-left: 3%;
     padding-right: 3%;
@@ -677,9 +679,9 @@ export const HeaderText = styled(Text)`
         color: #4460aa;
     }
     ${media.phone`
-    display: ${(props) => (props.desktop ? "none" : "block")};
-    font-family: NotoSansCJKkr;
-      font-size: 10px;
+        display: ${(props) => (props.desktop ? "none" : "block")};
+        font-family: NotoSansCJKkr;
+        font-size: 12px;
     `}
 `;
 
@@ -701,11 +703,11 @@ export const ChangedHeaderBox = styled(Text)`
         color: #4460aa;
     }
     ${media.phone`
-    display: ${(props) => (props.desktop ? "none" : "flex")};
+        display: ${(props) => (props.desktop ? "none" : "flex")};
         font-family: NotoSansCJKkr;
         width: 30px;
         height: 30px;
-        font-size: 10px;
+        font-size: 12px;
       `}
 `;
 
@@ -726,7 +728,7 @@ export const HeaderMail = styled(Text)`
             transition: transform 0.8s, color 0.15s ease-out;
         `}
     ${media.phone`
-        font-size: 10px;
+        font-size: 12px;
         font-family: NotoSansCJKkr;
         ${(props) =>
             props.scroll_top > 130 &&
@@ -963,11 +965,11 @@ export const Modal = (props) => {
 };
 
 export const ScrollColumn = styled(Column)`
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     max-width: 1560px;
     width: 100%;
-    height: 730px;
+    height: 700px;
     margin-top: 20px;
     ${media.phone`
         margin-top: 10px;
@@ -994,16 +996,14 @@ export const CloseButton = styled.div`
     &:hover {
         cursor: pointer;
     }
-    margin-right: ${(props) => props.right};
     ${media.phone`
         display: ${(props) => (props.desktop ? "none" : "flex")};
-        height: 16px;
+        height: 20px;
         &:after {
             left: -7.5px;
             top: 6.5px;
-            width: 16px;
+            width: 20px;
         }
-        margin-right: ${(props) => props.mobile_right};
-
+        margin-top: 10px;
     `};
 `;

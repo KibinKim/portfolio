@@ -30,7 +30,7 @@ class My extends Component {
                     color="light_gray"
                     scroll={scroll}
                     active={1700}
-                    mobile_active={700}
+                    mobile_active={1100}
                     mobile_transform="translateY(-30px)"
                 >
                     {" "}

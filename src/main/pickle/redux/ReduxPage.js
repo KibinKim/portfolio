@@ -97,6 +97,7 @@ export default class ReduxPage extends Component {
                                 left="30px"
                                 laptop_left="0px"
                                 laptop_top="30px"
+                                mobile_top="0px"
                                 bottom="80px"
                                 laptop_bottom="0px"
                                 size="14px"

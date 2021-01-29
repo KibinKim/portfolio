@@ -37,6 +37,7 @@ export const ShakeText = styled(Text)`
 export const Heading = styled(Text)`
     line-height: 1.7;
     font-size: 40px;
+    font-family: NotoSansCJKkr-Medium;
     @media only screen and (max-width: 1134px) {
         font-size: 30px;
     }
@@ -65,6 +66,7 @@ export const WorkMenuImg = styled(Img)`
         height: 24px;
     }
     ${media.phone`
+        margin-top: 2px;
         width: 17px;
         height: 20px;
       `};
@@ -76,12 +78,11 @@ export const WorkMenu = styled(Text)`
     font-family: NotoSansCJKkr-Medium;
     @media only screen and (max-width: 1134px) {
         margin-left: 11px;
-        font-size: 17px;
+        font-size: 16px;
     }
     ${media.phone`
         margin-top: 1px;
         margin-left: 8px;
-        font-size: 15px;
       `};
 `;
 

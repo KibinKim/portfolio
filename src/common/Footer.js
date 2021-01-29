@@ -36,7 +36,7 @@ export default class Footer extends Component {
                 </Text>
                 <Row align_items="center">
                     <Text size="15px" mobile_size="10px" color="mi_gray">
-                        Made by Kimkibin
+                        Made by devbean
                     </Text>
                     <HeartText size="20px" mobile_size="13px" left="10px" mobile_left="5px">
                         🖤

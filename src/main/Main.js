@@ -42,7 +42,12 @@ class Main extends Component {
                     page_1.style.opacity = `${1 - scroll * 0.0001}`;
                 }
             } else if (env == "MOBILE") {
-                if (scroll > 220 && scroll < 550) second_title.style.transform = `scale(${scroll * 0.0008})`;
+                if (scroll > 320 && scroll < 750) {
+                    second_title.style.transform = `scale(${scroll * 0.0008})`;
+                    page_1.style.opacity = `1`;
+                } else if (scroll > 1000) {
+                    page_1.style.opacity = `${1 - scroll * 0.0003}`;
+                }
             }
         }
     };

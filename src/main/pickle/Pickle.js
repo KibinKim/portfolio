@@ -46,7 +46,7 @@ class Pickle extends Component {
                     open={modal_open}
                     children={
                         <Container
-                            height="-webkit-fill-available"
+                            height="92%"
                             padding_top="30px"
                             mobile_padding_top="10px"
                             padding_bottom="30px"
@@ -154,7 +154,7 @@ class Pickle extends Component {
                         color="v_light_gray"
                         scroll={scroll}
                         active={3720}
-                        mobile_active={2700}
+                        mobile_active={3100}
                         mobile_transform="translateY(-40px)"
                     >
                         {" "}
@@ -167,7 +167,7 @@ class Pickle extends Component {
                         color="v_light_gray"
                         scroll={scroll}
                         active={3720}
-                        mobile_active={2700}
+                        mobile_active={3100}
                         mobile_transform="translateY(-40px)"
                     >
                         {" "}

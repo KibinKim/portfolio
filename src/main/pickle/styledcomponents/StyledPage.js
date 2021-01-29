@@ -87,6 +87,7 @@ export default class StyledPage extends Component {
                         left="30px"
                         laptop_left="0px"
                         laptop_top="30px"
+                        mobile_top="0px"
                         size="14px"
                         mobile_size="12px"
                         height="24px"
@@ -121,6 +122,7 @@ export default class StyledPage extends Component {
                     <Text
                         laptop_order="2"
                         laptop_top="30px"
+                        mobile_top="0px"
                         size="14px"
                         mobile_size="12px"
                         height="24px"

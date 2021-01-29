@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Text, MobileBr, DesktopBr } from "common/styleUtil";
+import { Container, Row, MobileBr, DesktopBr } from "common/styleUtil";
 import {
     TextArea,
     ShakeText,
