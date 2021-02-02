@@ -14,7 +14,7 @@ class Appeal extends Component {
         copy_text = copy_text.split("");
         if (!typing_bool) {
             typing_bool = true;
-            ty_int = setInterval(typing, 250);
+            ty_int = setInterval(typing, 180);
         }
         function typing() {
             if (typing_idx < copy_text.length) {

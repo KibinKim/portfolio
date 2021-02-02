@@ -17,6 +17,7 @@ class Header extends Component {
     handleScroll = (e) => {
         const { LayoutActions } = this.props;
         const scroll_top = ("scroll", e.target.scrollingElement.scrollTop);
+        console.log(scroll_top);
         this.setState({ scroll_top });
         LayoutActions.setScrollValue(scroll_top);
     };
@@ -79,7 +80,7 @@ class Header extends Component {
                     color={scroll_top > 2250 ? "#000" : "v_light_gray"}
                     mobile_color={scroll_top > 1490 ? "#000" : "v_light_gray"}
                     scroll_top={scroll_top}
-                    onClick={() => window.open(`${URL_FRONT}/contact`)}
+                    onClick={() => window.open(`${URL}/contact`)}
                 >
                     kibin3846@gmail.com
                 </HeaderMail>
