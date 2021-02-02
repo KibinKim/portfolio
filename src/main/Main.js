@@ -35,7 +35,7 @@ class Main extends Component {
         if (first_title && second_title && page_1) {
             first_title.style.transform = `scale(${1 - scroll * 0.001})`;
             if (env == "PC") {
-                if (scroll > 600 && scroll < 1000) {
+                if ((scroll > 600 && scroll < 1000) || scroll === 0) {
                     second_title.style.transform = `scale(${scroll * 0.0008})`;
                     page_1.style.opacity = `1`;
                 } else if (scroll > 1100) {

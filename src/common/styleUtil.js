@@ -536,6 +536,7 @@ export const Img = styled.img`
     max-width: ${(props) => props.max_width || ""};
     min-width: ${(props) => props.min_width || ""};
     height: ${(props) => props.height || ""};
+    max-height: ${(props) => props.max_height || ""};
     margin-top: ${(props) => props.top || ""};
     margin-left: ${(props) => props.left || ""};
     margin-right: ${(props) => props.right || ""};
@@ -969,7 +970,7 @@ export const ScrollColumn = styled(Column)`
     overflow-x: hidden;
     max-width: 1560px;
     width: 100%;
-    height: 700px;
+    height: 100%;
     margin-top: 20px;
     ${media.phone`
         margin-top: 10px;

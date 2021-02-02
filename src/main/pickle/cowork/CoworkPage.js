@@ -9,7 +9,7 @@ import pickle_wave from "assets/img/pickle_wave.png";
 export default class EtcPage extends Component {
     render() {
         return (
-            <Column position="relative" justify_content="center" color="#fff">
+            <Column style={{ display: "block" }} position="relative" justify_content="center" color="#fff">
                 <LottieResponsive
                     isClickToPauseDisabled={true}
                     options={{

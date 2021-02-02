@@ -32,6 +32,7 @@ export default class MobilePage extends Component {
         const { screen, screen_before, init_state } = this.state;
         return (
             <Column
+                style={{ display: "block" }}
                 padding_top="110px"
                 mobile_padding_top="30px"
                 padding_bottom="110px"

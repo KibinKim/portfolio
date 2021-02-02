@@ -9,6 +9,7 @@ export default class IntroPage extends Component {
     render() {
         return (
             <Column
+                style={{ display: "block" }}
                 id="frame"
                 padding_top="110px"
                 mobile_padding_top="30px"
@@ -162,7 +163,7 @@ export default class IntroPage extends Component {
                     mobile_top="60px"
                     size="16px"
                     mobile_size="12px"
-                    align_self="center"
+                    text_align="center"
                     font_family="NotoSansCJKkr-Medium"
                     cursor="pointer"
                     hover_color="#11c78f"

@@ -47,6 +47,7 @@ class Pickle extends Component {
                     children={
                         <Container
                             height="92%"
+                            mobile_height="97%"
                             padding_top="30px"
                             mobile_padding_top="10px"
                             padding_bottom="30px"
@@ -65,6 +66,7 @@ class Pickle extends Component {
                             <ScrollColumn id="contents" onScroll={this.handleScroll}>
                                 <Img src={pickle_landing} width="100%" height="auto" />
                                 <Column
+                                    style={{ display: "block" }}
                                     padding_bottom="70px"
                                     mobile_padding_bottom="50px"
                                     padding_left="110px"
@@ -108,6 +110,9 @@ class Pickle extends Component {
                                 <EtcPage />
                                 <CoworkPage />
                                 <Column
+                                    style={{ display: "block" }}
+                                    height="45px"
+                                    mobile_height="30px"
                                     align_items="center"
                                     padding_top="13px"
                                     mobile_padding_top="8px"
@@ -115,7 +120,7 @@ class Pickle extends Component {
                                     mobile_padding_bottom="8px"
                                     color="#000"
                                 >
-                                    <Text size="15px" mobile_size="12px" color="#4fdad5">
+                                    <Text size="15px" mobile_size="12px" color="#4fdad5" text_align="center">
                                         kibin<span style={{ color: "#fff" }}>.</span>
                                         <span style={{ color: "#f2ee72" }}>say</span>
                                         <span style={{ color: "#fff" }}>(</span>

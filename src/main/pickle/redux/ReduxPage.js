@@ -11,6 +11,7 @@ export default class ReduxPage extends Component {
     render() {
         return (
             <Column
+                style={{ display: "block" }}
                 padding_top="110px"
                 mobile_padding_top="30px"
                 padding_bottom="110px"
@@ -37,7 +38,7 @@ export default class ReduxPage extends Component {
                         mobile_direction="column"
                         mobile_align_items="center"
                     >
-                        <Row max_width="fit-content" width="100%" height="fit-content">
+                        <Row max_width="fit-content" width="100%" max_height="240px" height="fit-content">
                             <CodeImg
                                 max_width="360px"
                                 width="100%"
@@ -47,7 +48,14 @@ export default class ReduxPage extends Component {
                                 src={pickle_propsredux}
                             />
                         </Row>
-                        <Row max_width="fit-content" width="100%" left="8px" mobile_left="0px" height="fit-content">
+                        <Row
+                            max_width="fit-content"
+                            width="100%"
+                            left="8px"
+                            mobile_left="0px"
+                            max_height="293px"
+                            height="fit-content"
+                        >
                             <CodeImg
                                 max_width="460px"
                                 width="100%"
@@ -90,7 +98,14 @@ export default class ReduxPage extends Component {
                     justify_content="space-between"
                 >
                     <Row laptop_direction="column">
-                        <CodeImg desktop max_width="570px" width="100%" height="auto" src={pickle_reduxaction} />
+                        <CodeImg
+                            desktop
+                            max_width="570px"
+                            width="100%"
+                            max_height="620px"
+                            height="auto"
+                            src={pickle_reduxaction}
+                        />
                         <Column left="8px" laptop_left="0px" justify_content="flex-end">
                             <Text
                                 laptop_order="1"

@@ -37,11 +37,12 @@ export default class StyledPage extends Component {
             window.innerWidth > 1220
                 ? (move_screen.style.transform = `translateX(-${scroll - 4520}px)`)
                 : (move_screen.style.transform = `translateX(-${scroll - 6300}px)`);
-        } else if (env == "MOBILE") move_screen.style.transform = `translateX(-${scroll - 3450}px)`;
+        } else if (env == "MOBILE") move_screen.style.transform = `translateX(-${scroll - 3750}px)`;
     }
     render() {
         return (
             <Column
+                style={{ display: "block" }}
                 padding_top="110px"
                 mobile_padding_top="30px"
                 padding_bottom="110px"
@@ -75,10 +76,10 @@ export default class StyledPage extends Component {
                     justify_content="space-between"
                 >
                     <Row desktop width="100%">
-                        <Row max_width="fit-content" width="100%" height="fit-content">
+                        <Row max_width="fit-content" width="100%" max_height="195px" height="fit-content">
                             <CodeImg max_width="290px" width="100%" height="auto" src={pickle_provider} />
                         </Row>
-                        <Row max_width="fit-content" width="100%" height="fit-content" left="8px">
+                        <Row max_width="fit-content" width="100%" max_height="235px" height="fit-content" left="8px">
                             <CodeImg max_width="400px" width="100%" height="auto" src={pickle_globalstyle} />
                         </Row>
                     </Row>
@@ -143,10 +144,10 @@ export default class StyledPage extends Component {
                         laptop_left="0px"
                         laptop_order="1"
                     >
-                        <Row max_width="fit-content" width="100%" height="fit-content">
+                        <Row max_width="fit-content" width="100%" max_height="245px" height="fit-content">
                             <CodeImg max_width="450px" width="100%" height="auto" src={pickle_column} />
                         </Row>
-                        <Row max_width="fit-content" width="100%" height="fit-content">
+                        <Row max_width="fit-content" width="100%" max_height="205px" height="fit-content">
                             <CodeImg max_width="280px" width="100%" height="auto" left="8px" src={pickle_reuse} />
                         </Row>
                     </Row>
@@ -173,7 +174,7 @@ export default class StyledPage extends Component {
                     justify_content="space-between"
                 >
                     <Row desktop width="100%" align_items="flex-end" laptop_justify_content="center">
-                        <Row max_width="fit-content" width="100%" height="fit-content">
+                        <Row max_width="fit-content" width="100%" max_height="335px" height="fit-content">
                             <BounceCodeImg
                                 max_width="230px"
                                 min_width="165px"

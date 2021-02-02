@@ -16,6 +16,7 @@ export default class EtcPage extends Component {
     render() {
         return (
             <Column
+                style={{ display: "block" }}
                 padding_top="110px"
                 mobile_padding_top="30px"
                 padding_bottom="110px"
@@ -64,11 +65,11 @@ export default class EtcPage extends Component {
                     justify_content="space-between"
                 >
                     <Row desktop width="100%" laptop_justify_content="flex-end">
-                        <Row max_width="fit-content" width="100%" height="fit-content">
+                        <Row max_width="fit-content" width="100%" max_height="265px" height="fit-content">
                             <CodeImg max_width="350px" width="100%" height="auto" src={pickle_axios} />
                         </Row>
 
-                        <Row max_width="fit-content" width="100%" height="fit-content" left="8px">
+                        <Row max_width="fit-content" width="100%" max_height="310px" height="fit-content" left="8px">
                             <CodeImg max_width="360px" width="100%" height="auto" src={pickle_communication} />
                         </Row>
                     </Row>
@@ -144,14 +145,20 @@ export default class EtcPage extends Component {
                         laptop_align_items="flex-start"
                         laptop_order="1"
                     >
-                        <Row max_width="fit-content" width="100%" height="fit-content">
+                        <Row max_width="fit-content" width="100%" max_height="162px" height="fit-content">
                             <CodeImg max_width="500px" width="100%" height="auto" src={pickle_authconnect} />
                         </Row>
                         <Row top="8px" width="100%">
-                            <Row max_width="fit-content" width="100%" height="fit-content">
+                            <Row max_width="fit-content" width="100%" max_height="325px" height="fit-content">
                                 <CodeImg max_width="460px" width="100%" height="auto" src={pickle_opensocket} />
                             </Row>
-                            <Row max_width="fit-content" width="100%" height="fit-content" left="8px">
+                            <Row
+                                max_width="fit-content"
+                                width="100%"
+                                max_height="248px"
+                                height="fit-content"
+                                left="8px"
+                            >
                                 <Img
                                     max_width="270px"
                                     width="100%"
