@@ -46,8 +46,8 @@ class Pickle extends Component {
                     open={modal_open}
                     children={
                         <Container
-                            height="92%"
-                            mobile_height="97%"
+                            height="90%"
+                            mobile_height="94%"
                             padding_top="30px"
                             mobile_padding_top="10px"
                             padding_bottom="30px"
