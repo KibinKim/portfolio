@@ -1,16 +1,14 @@
-import { createStore, applyMiddleware, compose } from "redux";
-import penderMiddleware from "redux-pender";
-import modules from "./modules";
-//modules를 선언하기 위해서는 경로에 reducer가 존재해야 함
-
-const isDevelopment = process.env.NODE_ENV === "development";
-const composeEnhancers = isDevelopment ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose : compose;
+import { createStore } from "redux";
+import rootReducer from "./modules/index";
 
 /*
-미들웨어는 action과 reducer의 중간자 역할을 한다고 보면됨
+첫번째 인자로 합친 리듀서를, 두번째 인자로 redux devtools를 사용하기 위한 값을 넘김.
  */
-const Store = (initialState) => {
-    const store = createStore(modules, initialState, composeEnhancers(applyMiddleware(penderMiddleware())));
+const Store = () => {
+    const store = createStore(
+        rootReducer,
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    );
     return store;
 };
 

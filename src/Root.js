@@ -9,7 +9,7 @@ const Root = ({ store }) => {
         <ThemeProvider theme={Theme}>
             <GlobalStyles />
             <Provider store={store}>
-                <App store={store} />
+                <App />
             </Provider>
         </ThemeProvider>
     );
