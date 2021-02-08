@@ -70,6 +70,7 @@ class Main extends Component {
     };
 
     render() {
+        console.log("main");
         const { loading } = this.state;
         return loading && document.referrer != `${URL}/contact` ? (
             loading

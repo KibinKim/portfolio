@@ -11,6 +11,9 @@ import project_eyes from "assets/img/project_eyes.png";
 import project_cely from "assets/img/project_cely.png";
 
 export default class Others extends Component {
+    shouldComponentUpdate() {
+        return false;
+    }
     render() {
         return (
             <Container

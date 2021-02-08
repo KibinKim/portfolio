@@ -1,6 +1,8 @@
 import { Map } from "immutable";
 import { handleActions, createAction } from "redux-actions";
 
+//Ducks Pattern
+
 //액션 타입 정의
 const SET_SCROLL_VALUE = "layout/SET_SCROLL_VALUE";
 

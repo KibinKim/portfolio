@@ -112,9 +112,6 @@ class Appeal extends Component {
     }
 }
 
-export default connect(
-    (state) => ({
-        scroll: state.layout.get("scroll"),
-    }),
-    (dispatch) => ({}),
-)(Appeal);
+export default connect((state) => ({
+    scroll: state.layout.get("scroll"),
+}))(Appeal);

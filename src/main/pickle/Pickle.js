@@ -218,9 +218,6 @@ class Pickle extends Component {
     }
 }
 
-export default connect(
-    (state) => ({
-        scroll: state.layout.get("scroll"),
-    }),
-    (dispatch) => ({}),
-)(Pickle);
+export default connect((state) => ({
+    scroll: state.layout.get("scroll"),
+}))(Pickle);

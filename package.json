@@ -8,6 +8,7 @@
         "@testing-library/user-event": "^7.1.2",
         "@types/react-lottie": "^1.2.5",
         "emailjs-com": "^2.6.4",
+        "extension": "^0.2.2",
         "immutable": "^4.0.0-rc.12",
         "nginx": "^0.0.0",
         "react": "^16.14.0",
@@ -18,6 +19,7 @@
         "react-scripts": "^3.4.4",
         "redux": "^4.0.5",
         "redux-actions": "^2.6.5",
+        "redux-devtools-extension": "^2.13.8",
         "styled-components": "^5.2.1"
     },
     "scripts": {

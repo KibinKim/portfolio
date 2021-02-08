@@ -268,9 +268,6 @@ class My extends Component {
     }
 }
 
-export default connect(
-    (state) => ({
-        scroll: state.layout.get("scroll"),
-    }),
-    (dispatch) => ({}),
-)(My);
+export default connect((state) => ({
+    scroll: state.layout.get("scroll"),
+}))(My);

@@ -13,6 +13,9 @@ import {
 import check from "assets/img/check.png";
 
 export default class MyWork extends Component {
+    shouldComponentUpdate() {
+        return false;
+    }
     render() {
         return (
             <Container
